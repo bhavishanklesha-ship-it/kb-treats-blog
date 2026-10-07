@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-script: "Dancing Script", cursive, Georgia, serif;
+  --color-brand-plum: #5E123B;
+  --color-brand-wine: #6B1947;
+  --color-brand-deep: #430926;
+  --color-brand-blush: #EBB0C3;
+  --color-brand-rose: #F3CAD8;
+  --color-brand-soft-pink: #FDF1F5;
+  --color-brand-cream: #FCF8F9;
+  --color-brand-text: #2B0E1E;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+

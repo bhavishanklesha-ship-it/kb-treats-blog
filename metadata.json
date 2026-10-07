@@ -1,0 +1,6 @@
+{
+  "name": "KB Treats - Homemade Bakery & Dessert Journal",
+  "description": "From Our Kitchen to Your Celebration. KB Treats is a homegrown dessert brand crafting customized cakes, fudgy brownies, artisanal cheesecakes, brookies, cookies, and cupcakes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
