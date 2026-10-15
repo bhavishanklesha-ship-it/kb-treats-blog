@@ -158,13 +158,17 @@ export function DessertsView({ onNavigate, onSelectCustomDessert }: DessertsView
 
               {/* Action Bar */}
               <div className="p-6 pt-0 border-t border-[#F0D5E0]/50 mt-4 flex items-center gap-2 pt-4">
-                <button
-                  onClick={() => handleInquire(item.name)}
+                <a
+                  href="/custom-orders"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleInquire(item.name);
+                  }}
                   className="flex-1 py-2.5 px-3 text-xs font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
                 >
                   <span>Inquire for Custom Order</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
                 <button
                   onClick={() => setActiveItemModal(item)}
                   className="p-2.5 text-xs text-[#5E123B] hover:bg-[#FCEEF3] border border-[#F0D5E0] rounded-xl transition-colors cursor-pointer"
@@ -256,16 +260,18 @@ export function DessertsView({ onNavigate, onSelectCustomDessert }: DessertsView
             </div>
 
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={() => {
+              <a
+                href="/custom-orders"
+                onClick={(e) => {
+                  e.preventDefault();
                   const name = activeItemModal.name;
                   setActiveItemModal(null);
                   handleInquire(name);
                 }}
-                className="flex-1 py-3 px-4 text-xs font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-xl transition-all cursor-pointer text-center"
+                className="flex-1 py-3 px-4 text-xs font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-xl transition-all cursor-pointer text-center block"
               >
                 Inquire for {activeItemModal.name}
-              </button>
+              </a>
               <button
                 onClick={() => setActiveItemModal(null)}
                 className="py-3 px-5 text-xs font-semibold text-[#4A1D34] bg-[#F9EAF0] hover:bg-[#F3D3E0] rounded-xl transition-colors cursor-pointer"

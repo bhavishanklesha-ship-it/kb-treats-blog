@@ -10,6 +10,15 @@ interface NavbarProps {
   onOpenArticleBySlug?: (slug: string) => void;
 }
 
+export const PAGE_PATHS: Record<NavigationPage, string> = {
+  home: '/',
+  about: '/about',
+  blog: '/journal',
+  desserts: '/desserts',
+  'custom-orders': '/custom-orders',
+  contact: '/contact',
+};
+
 export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -25,15 +34,18 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const handleNavClick = (page: NavigationPage) => {
     onNavigate(page);
     setMobileMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <header className="sticky top-0 z-40 bg-[#FCF8F9]/95 backdrop-blur-md border-b border-[#F0D5E0]/80 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Zone 1: Brand Wordmark with Official Emblem */}
-        <button
-          onClick={() => handleNavClick('home')}
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick('home');
+          }}
           className="flex items-center gap-3 group cursor-pointer text-left"
           aria-label="KB Treats Home"
         >
@@ -46,16 +58,20 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
               From our kitchen to your celebration
             </span>
           </div>
-        </button>
+        </a>
 
         {/* Zone 2: 4-6 Clean Text Navigation Links */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-[#4A1D34]">
           {navLinks.map((item) => {
             const isActive = currentPage === item.page;
             return (
-              <button
+              <a
                 key={item.page}
-                onClick={() => handleNavClick(item.page)}
+                href={PAGE_PATHS[item.page]}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.page);
+                }}
                 className={`relative py-1 cursor-pointer transition-colors whitespace-nowrap ${
                   isActive
                     ? 'text-[#5E123B] font-semibold'
@@ -66,7 +82,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
                 {isActive && (
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#5E123B] rounded-full" />
                 )}
-              </button>
+              </a>
             );
           })}
         </nav>
@@ -89,13 +105,17 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <span className="text-[#C495A9]">·</span>
             <a href="tel:+917977552009" className="font-mono hover:underline font-medium">79775 52009</a>
           </div>
-          <button
-            onClick={() => handleNavClick('custom-orders')}
+          <a
+            href="/custom-orders"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('custom-orders');
+            }}
             className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wide uppercase text-white bg-[#5E123B] hover:bg-[#430926] rounded-full transition-all shadow-sm cursor-pointer whitespace-nowrap active:scale-[0.98]"
           >
             <span>Plan Custom Order</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
 
         {/* Mobile menu toggle button */}
@@ -126,17 +146,21 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             {navLinks.map((item) => {
               const isActive = currentPage === item.page;
               return (
-                <button
+                <a
                   key={item.page}
-                  onClick={() => handleNavClick(item.page)}
-                  className={`text-left px-3 py-2.5 text-base font-medium rounded-lg transition-colors cursor-pointer ${
+                  href={PAGE_PATHS[item.page]}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.page);
+                  }}
+                  className={`text-left px-3 py-2.5 text-base font-medium rounded-lg transition-colors cursor-pointer block ${
                     isActive
                       ? 'bg-[#F9E6EE] text-[#5E123B] font-semibold'
                       : 'text-[#3E1A2B] hover:bg-[#FDF1F5]'
                   }`}
                 >
                   {item.label}
-                </button>
+                </a>
               );
             })}
           </div>
@@ -150,7 +174,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
               </div>
             </div>
             <a
-              href="https://www.instagram.com/kbtreats08?stkn=MTA5a3N3c3czam9yNA=="
+              href="https://wa.me/919892579948?text=Hello%20KB%20Treats,%20I%20would%20like%20to%20plan%20a%20custom%20order!"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold text-[#5E123B] bg-[#FCEEF3] rounded-xl"
@@ -158,13 +182,17 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
               <Instagram className="w-4 h-4" />
               <span>@kbtreats08 on Instagram</span>
             </a>
-            <button
-              onClick={() => handleNavClick('custom-orders')}
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-xl transition-all cursor-pointer shadow-sm"
+            <a
+              href="/custom-orders"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('custom-orders');
+              }}
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-xl transition-all cursor-pointer shadow-sm text-center"
             >
               <span>Plan Custom Order</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>
       )}

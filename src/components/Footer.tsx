@@ -29,7 +29,14 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-[#3E0E27]">
           {/* Brand Info with Logo (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('home');
+              }}
+              className="flex items-center gap-3 cursor-pointer group"
+            >
               <KbTreatsLogo size={52} />
               <div>
                 <span className="font-serif text-2xl font-bold tracking-tight text-white block leading-none">
@@ -39,7 +46,7 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
                   From our kitchen to your celebration
                 </p>
               </div>
-            </div>
+            </a>
 
             <p className="text-xs sm:text-sm leading-relaxed text-[#DAB5C4] max-w-sm">
               Homegrown dessert brand crafting bespoke celebration cakes, signature 2-in-1 cookie tins, gooey brownie tubs, brookies, cheesecakes, and cupcakes. Freshly baked with pure ingredients in Mumbai.
@@ -98,52 +105,76 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-[#DAB5C4]">
               <li>
-                <button
-                  onClick={() => onNavigate('home')}
-                  className="hover:text-white transition-colors cursor-pointer"
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('home');
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
                 >
                   Home
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
-                  className="hover:text-white transition-colors cursor-pointer"
+                <a
+                  href="/about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('about');
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
                 >
                   About KB Treats
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('blog')}
-                  className="hover:text-white transition-colors cursor-pointer"
+                <a
+                  href="/journal"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('blog');
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
                 >
                   Dessert Blog
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('desserts')}
-                  className="hover:text-white transition-colors cursor-pointer"
+                <a
+                  href="/desserts"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('desserts');
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
                 >
                   Our Desserts
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('custom-orders')}
-                  className="hover:text-white transition-colors cursor-pointer"
+                <a
+                  href="/custom-orders"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('custom-orders');
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
                 >
                   Custom Orders
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('contact')}
-                  className="hover:text-white transition-colors cursor-pointer"
+                <a
+                  href="/contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('contact');
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
                 >
                   Contact & Inquiries
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -155,11 +186,12 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
             </h4>
             <div className="space-y-2.5">
               {BLOG_POSTS.slice(0, 3).map((post) => (
-                <button
+                <a
                   key={post.id}
-                  onClick={() => {
+                  href={`/journal/${post.slug}`}
+                  onClick={(e) => {
+                    e.preventDefault();
                     onSelectBlog(post.slug);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="text-left block group cursor-pointer"
                 >
@@ -169,15 +201,19 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
                   <span className="text-[11px] text-[#A67E90]">
                     {post.category} · {post.readTime}
                   </span>
-                </button>
+                </a>
               ))}
-              <button
-                onClick={() => onNavigate('blog')}
+              <a
+                href="/journal"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate('blog');
+                }}
                 className="text-xs text-[#F3CAD8] hover:text-white font-medium inline-flex items-center gap-1 pt-1 cursor-pointer"
               >
                 <span>Read all 10 stories</span>
                 <span>&rarr;</span>
-              </button>
+              </a>
             </div>
           </div>
 

@@ -62,9 +62,13 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
       {/* Featured Editorial Spotlight (Top Story) */}
       {selectedCategory === 'All' && !searchQuery && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            onClick={() => onSelectBlog(heroPost.slug)}
-            className="bg-white rounded-3xl overflow-hidden border border-[#F0D5E0] shadow-md hover:shadow-xl transition-all cursor-pointer group grid grid-cols-1 lg:grid-cols-12"
+          <a
+            href={`/journal/${heroPost.slug}`}
+            onClick={(e) => {
+              e.preventDefault();
+              onSelectBlog(heroPost.slug);
+            }}
+            className="bg-white rounded-3xl overflow-hidden border border-[#F0D5E0] shadow-md hover:shadow-xl transition-all cursor-pointer group grid grid-cols-1 lg:grid-cols-12 block text-left"
           >
             {/* Image (7 cols) */}
             <div className="lg:col-span-7 h-72 sm:h-96 lg:h-full relative overflow-hidden bg-[#FAF0F4]">
@@ -119,7 +123,7 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
-          </div>
+          </a>
         </section>
       )}
 
@@ -196,10 +200,14 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <article
+              <a
                 key={post.id}
-                onClick={() => onSelectBlog(post.slug)}
-                className="bg-white rounded-2xl overflow-hidden border border-[#F0D5E0] shadow-sm hover:shadow-lg transition-all cursor-pointer group flex flex-col justify-between"
+                href={`/journal/${post.slug}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onSelectBlog(post.slug);
+                }}
+                className="bg-white rounded-2xl overflow-hidden border border-[#F0D5E0] shadow-sm hover:shadow-lg transition-all cursor-pointer group flex flex-col justify-between block text-left"
               >
                 <div>
                   <div className="h-52 overflow-hidden bg-[#FAF0F4] relative">
@@ -249,7 +257,7 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
                   <span>Read Story</span>
                   <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         )}

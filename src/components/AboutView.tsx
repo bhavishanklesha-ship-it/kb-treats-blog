@@ -193,20 +193,28 @@ export function AboutView({ onNavigate }: AboutViewProps) {
             Read our baking secrets on the journal or get in touch with us at <strong>98925 79948</strong> / <strong>79775 52009</strong> to design a dessert tailored precisely for your next milestone.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button
-              onClick={() => onNavigate('blog')}
+            <a
+              href="/journal"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('blog');
+              }}
               className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold text-[#2B081A] bg-[#FCEEF3] hover:bg-white rounded-full transition-colors cursor-pointer"
             >
               <BookOpen className="w-4 h-4" />
               <span>Read Our Blog</span>
-            </button>
-            <button
-              onClick={() => onNavigate('custom-orders')}
+            </a>
+            <a
+              href="/custom-orders"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('custom-orders');
+              }}
               className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold text-white bg-[#5E123B] hover:bg-[#7A1C4F] rounded-full transition-colors cursor-pointer"
             >
               <span>Plan a Custom Order</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

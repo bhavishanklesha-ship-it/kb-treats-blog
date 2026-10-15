@@ -7,13 +7,17 @@ export interface BlogSection {
 export interface BlogPost {
   id: string;
   slug: string;
+  aliases?: string[];
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   subtitle: string;
   category: 'Our Story' | 'Baking Secrets' | 'Cake Design' | 'Flavor Guide' | 'Sweet Debates' | 'Celebration Tips' | 'Ingredients';
   readTime: string;
   publishedDate: string;
   author: string;
   coverImage: string;
+  coverImageAlt?: string;
   excerpt: string;
   keyTakeaways: string[];
   sections: BlogSection[];
@@ -25,14 +29,18 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'story-behind-kb-treats',
-    slug: 'the-story-behind-kb-treats',
+    slug: 'story-behind-kb-treats',
+    aliases: ['the-story-behind-kb-treats'],
     title: 'The Story Behind KB Treats: From Passion to Every Celebration',
+    seoTitle: 'Our Homegrown Bakery Story: Passion to Plate | KB Treats',
+    seoDescription: 'Discover our homegrown bakery story: how KB Treats grew from a passion in Mumbai into a beloved dessert haven crafting bespoke cakes with pure ingredients.',
     subtitle: 'How an aromatic home kitchen, late-night recipe tests, and pure dedication grew into a homegrown dessert sanctuary.',
     category: 'Our Story',
     readTime: '6 min read',
     publishedDate: 'October 2, 2026',
     author: 'Bhavisha, Founder of KB Treats',
     coverImage: '/images/bakers_kitchen_story_1791348346164.jpg',
+    coverImageAlt: 'Founder Bhavisha baking homemade artisanal celebration cakes in the KB Treats homegrown bakery kitchen',
     excerpt: 'KB Treats did not begin with commercial equipment or sterile factory lines; it began with the gentle hum of an electric hand mixer, the irresistible perfume of browning butter, and the sheer joy of watching friends take their first bite.',
     keyTakeaways: [
       'Started as a homegrown passion project fueled by a love for unadulterated baking.',
@@ -70,14 +78,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'why-freshly-baked-desserts-taste-better',
-    slug: 'why-freshly-baked-desserts-taste-better',
+    slug: 'why-fresh-baked-tastes-better',
+    aliases: ['why-freshly-baked-desserts-taste-better'],
     title: 'Why Freshly Baked Desserts Taste Better',
+    seoTitle: 'Why Freshly Baked Desserts Taste Far Better | KB Treats',
+    seoDescription: 'Learn why freshly baked desserts taste far better. Explore the baking science of natural moisture retention, aromatic compounds, and morning-of oven bakes.',
     subtitle: 'The food science, moisture retention, and delicate aromatic chemistry of baking to order versus mass-retail display cases.',
     category: 'Baking Secrets',
     readTime: '5 min read',
     publishedDate: 'September 28, 2026',
     author: 'KB Treats Bakery Team',
     coverImage: '/images/anniversary_photo_floral_cake_1791370942662.jpg',
+    coverImageAlt: 'Tiered celebration cake showing moist, freshly baked sponge layers garnished with fresh floral petals',
     excerpt: 'Ever wonder why a dessert from a specialized homegrown kitchen tastes incomparably more vibrant than a shelf-bought counterpart? Discover the fascinating science of fresh baking.',
     keyTakeaways: [
       'Volatile aromatic flavor compounds dissipate within 48 to 72 hours of baking.',
@@ -114,14 +126,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'customized-cakes-turning-ideas-into-reality',
-    slug: 'customized-cakes-turning-your-ideas-into-reality',
+    slug: 'custom-cake-design-guide',
+    aliases: ['customized-cakes-turning-your-ideas-into-reality', 'customized-cakes-turning-ideas-into-reality'],
     title: 'Customized Cakes: Turning Your Ideas into Reality',
+    seoTitle: 'Customized Cake Design: Turning Ideas to Reality | KB Treats',
+    seoDescription: 'Master customized cake design with our artisan guide. Learn how we translate your party theme, color palette, and favorite flavours into an edible centerpiece.',
     subtitle: 'From moodboards and color palettes to structural artistry: how we bring your celebration visions to life.',
     category: 'Cake Design',
     readTime: '7 min read',
     publishedDate: 'September 22, 2026',
     author: 'Bhavisha, Founder of KB Treats',
     coverImage: '/images/cake_decorating_artistry_1791348365285.jpg',
+    coverImageAlt: 'Pastry artisan piping delicate floral buttercream lace during a customized cake design decorating session',
     excerpt: 'Whether you dream of a whimsical meadow floral cake, a vintage Lambeth piping masterpiece, or a sleek minimalist modern tier, learn the collaborative process behind custom cake design.',
     keyTakeaways: [
       'Custom cakes are tailored to the venue, guest count, aesthetic theme, and flavor profile.',
@@ -159,14 +175,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'cake-flavours-that-make-celebration-special',
-    slug: 'cake-flavours-that-make-every-celebration-special',
+    slug: 'celebration-cake-flavours',
+    aliases: ['cake-flavours-that-make-every-celebration-special'],
     title: 'Cake Flavours That Make Every Celebration Special',
+    seoTitle: 'Best Celebration Cake Flavours & Taste Pairings | KB Treats',
+    seoDescription: 'Explore the best celebration cake flavours and taste pairings. Discover how dark chocolate ganache, salted caramel, and berry coulis elevate your event cake.',
     subtitle: 'Beyond standard vanilla and chocolate: exploring sophisticated flavor pairings that captivate every palate.',
     category: 'Flavor Guide',
     readTime: '6 min read',
     publishedDate: 'September 15, 2026',
     author: 'KB Treats Flavor Lab',
     coverImage: '/images/cookies_cupcakes_assortment_1791347579750.jpg',
+    coverImageAlt: 'Gourmet cupcakes and handcrafted frosted confections showcasing rich celebration cake flavours and fillings',
     excerpt: 'Explore the thoughtful flavor pairings crafted in the KB Treats kitchen—from roasted hazelnut praline to tangy berry reductions and salted caramel crunch.',
     keyTakeaways: [
       'Balance sweet components with acidity (berries, citrus) or mineral salt for multi-dimensional tasting.',
@@ -205,14 +225,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'brownies-vs-brookies-which-one-should-you-choose',
-    slug: 'brownies-vs-brookies-which-one-should-you-choose',
+    slug: 'brownies-vs-brookies',
+    aliases: ['brownies-vs-brookies-which-one-should-you-choose'],
     title: 'Brownies vs Brookies: Which One Should You Choose?',
+    seoTitle: 'Brownies vs Brookies: Which Dessert Is for You? | KB Treats',
+    seoDescription: 'Brownies vs brookies: uncover texture differences, cocoa depth, and serving ideas to pick the ultimate chocolate dessert for your next family gathering.',
     subtitle: 'The ultimate guide to deciding between a dense fudgy brownie and the irresistible hybrid mashup of a brookie.',
     category: 'Sweet Debates',
     readTime: '5 min read',
     publishedDate: 'September 08, 2026',
     author: 'KB Treats Kitchen Team',
     coverImage: '/images/brownies_brookies_stack_1791347558371.jpg',
+    coverImageAlt: 'Decadent stack of fudgy Belgian dark chocolate brownies alongside golden chocolate chip brookies',
     excerpt: 'Fudgy, crinkly brownie or chewy, golden cookie-brownie hybrid? We break down the textures, flavor profiles, and ideal serving scenarios for both favorites.',
     keyTakeaways: [
       'Brownies offer pure, unadulterated, deep cocoa intensity with a fudgy chew.',
@@ -249,14 +273,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'why-cheesecake-is-the-perfect-dessert',
-    slug: 'why-cheesecake-is-the-perfect-dessert-for-every-occasion',
+    slug: 'cheesecake-for-every-occasion',
+    aliases: ['why-cheesecake-is-the-perfect-dessert-for-every-occasion'],
     title: 'Why Cheesecake Is the Perfect Dessert for Every Occasion',
+    seoTitle: 'Cheesecake for Every Occasion: Why It Excels | KB Treats',
+    seoDescription: 'Discover why cheesecake for every occasion is the ideal choice. From Basque burnt to berry compote, enjoy refreshing tang, creamy texture, and pure elegance.',
     subtitle: 'From the caramelized drama of Basque burnt to the timeless satin of New York style: why cheesecake never disappoints.',
     category: 'Flavor Guide',
     readTime: '6 min read',
     publishedDate: 'August 30, 2026',
     author: 'Bhavisha, Founder of KB Treats',
     coverImage: '/images/basque_cheesecake_slice_1791347568824.jpg',
+    coverImageAlt: 'Golden caramelized slice of San Sebastian Basque cheesecake for every occasion served on an artisanal plate',
     excerpt: 'Unlike heavy sponges or cloying confections, a masterfully crafted cheesecake offers refreshing acidity, velvety richness, and an unmatched sensory elegance.',
     keyTakeaways: [
       'Cheesecake naturally balances sweetness with cultured lactic tang, making it enjoyable even after rich meals.',
@@ -293,14 +321,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'cookies-cupcakes-small-desserts-big-happiness',
-    slug: 'cookies-cupcakes-and-more-small-desserts-big-happiness',
+    slug: 'cookies-cupcakes-small-desserts',
+    aliases: ['cookies-cupcakes-and-more-small-desserts-big-happiness'],
     title: 'Cookies, Cupcakes & More: Small Desserts, Big Happiness',
+    seoTitle: 'Cookies and Cupcakes: Small Party Desserts Guide | KB Treats',
+    seoDescription: 'Delight guests with gourmet cookies and cupcakes. Learn how bite-sized party desserts offer flavor variety, effortless mingling, and pure celebratory joy.',
     subtitle: 'The joyful psychology of bite-sized indulgence and how petite desserts transform party tables.',
     category: 'Celebration Tips',
     readTime: '5 min read',
     publishedDate: 'August 21, 2026',
     author: 'KB Treats Bakery Team',
     coverImage: '/images/mini_cookie_trays_baked_1791348938467.jpg',
+    coverImageAlt: 'Freshly baked trays of golden brown-butter chocolate chunk cookies and small party desserts',
     excerpt: 'You do not always need a three-tiered cake to celebrate. Discover why handheld treats like cookies and cupcakes are the unsung heroes of gatherings.',
     keyTakeaways: [
       'Petite desserts allow guests to sample multiple flavors without committing to a single giant slice.',
@@ -337,14 +369,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'importance-of-real-and-premium-ingredients',
-    slug: 'the-importance-of-using-real-and-premium-ingredients',
+    slug: 'real-premium-ingredients',
+    aliases: ['the-importance-of-using-real-and-premium-ingredients'],
     title: 'The Importance of Using Real and Premium Ingredients',
+    seoTitle: 'Why Real Baking Ingredients Matter in Every Bite | KB Treats',
+    seoDescription: 'Discover why real baking ingredients make every bite unforgettable. See how pure cultured butter, Bourbon vanilla, and Belgian chocolate define KB Treats.',
     subtitle: 'Why butter beats margarine, vanilla beans trump essence, and pure Belgian couverture changes everything.',
     category: 'Ingredients',
     readTime: '6 min read',
     publishedDate: 'August 14, 2026',
     author: 'Bhavisha, Founder of KB Treats',
     coverImage: '/images/cookie_tin_two_in_one_og_1791350553246.jpg',
+    coverImageAlt: 'Artisanal chocolate chunk cookies prepared with real baking ingredients displayed inside a signature gift tin',
     excerpt: 'In baking, there is nowhere to hide poor ingredients. Step behind the scenes at KB Treats to see why our ingredient pantry is our greatest point of pride.',
     keyTakeaways: [
       'Butter provides pure dairy fats that melt at human body temperature for a clean mouthfeel.',
@@ -382,14 +418,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'how-to-choose-perfect-dessert-for-occasion',
-    slug: 'how-to-choose-the-perfect-dessert-for-your-occasion',
+    slug: 'choose-perfect-dessert',
+    aliases: ['how-to-choose-the-perfect-dessert-for-your-occasion'],
     title: 'How to Choose the Perfect Dessert for Your Occasion',
+    seoTitle: 'How to Choose the Perfect Dessert for Your Event | KB Treats',
+    seoDescription: 'Learn how to choose the perfect dessert for your event. Calculate portions, match venue temperature, and select between centerpiece cakes or dessert platters.',
     subtitle: 'A thoughtful host’s guide to matching guest count, venue temperature, event vibe, and serving logistics.',
     category: 'Celebration Tips',
     readTime: '6 min read',
     publishedDate: 'August 06, 2026',
     author: 'KB Treats Celebration Team',
     coverImage: '/images/cookies_cupcakes_assortment_1791347579750.jpg',
+    coverImageAlt: 'Festive dessert table layout with cupcakes and cookies to help hosts choose the perfect dessert for celebrations',
     excerpt: 'Planning an intimate candlelit dinner or a bustling 50-guest garden party? Learn how to calculate portions, match event themes, and select the ideal dessert format.',
     keyTakeaways: [
       'Determine your serving style: plated dessert, formal cake cutting, or standing finger food dessert bar.',
@@ -426,14 +466,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'from-our-kitchen-to-your-celebration',
-    slug: 'from-our-kitchen-to-your-celebration-the-kb-treats-experience',
+    slug: 'kitchen-to-celebration-experience',
+    aliases: ['from-our-kitchen-to-your-celebration-the-kb-treats-experience'],
     title: 'From Our Kitchen to Your Celebration: The KB Treats Experience',
+    seoTitle: 'The KB Treats Experience: From Kitchen to Celebration',
+    seoDescription: 'Step into the KB Treats experience: from personal flavor consultation to fresh morning baking and elegant gifting, see how we celebrate milestones with you.',
     subtitle: 'Step into the complete journey of how an order is received, planned, freshly baked, and delivered for your biggest moments.',
     category: 'Our Story',
     readTime: '7 min read',
     publishedDate: 'July 28, 2026',
     author: 'Bhavisha, Founder of KB Treats',
     coverImage: '/images/hero_celebration_cake_1791347545940.jpg',
+    coverImageAlt: 'Multi-tiered bespoke celebration cake with delicate handcrafted accents highlighting the KB Treats experience',
     excerpt: 'Tagline: "From Our Kitchen to Your Celebration." Discover what that phrase means to us every single day as we bake, frost, package, and celebrate alongside you.',
     keyTakeaways: [
       'We treat every order as a personal invitation into your family’s most sacred milestones.',
@@ -470,3 +514,11 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ['KB Treats Experience', 'Heart of Baking', 'Celebration Memories', 'Homegrown Brand']
   }
 ];
+
+export function findBlogPost(slugOrAlias: string): BlogPost | undefined {
+  if (!slugOrAlias) return undefined;
+  const clean = slugOrAlias.toLowerCase().trim().replace(/^\/+(journal\/|article\/)?/, '').replace(/\/+$/, '');
+  return BLOG_POSTS.find(
+    (p) => p.slug === clean || p.id === clean || p.aliases?.includes(clean)
+  );
+}

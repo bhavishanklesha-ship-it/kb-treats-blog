@@ -4,6 +4,7 @@ import { BLOG_POSTS, BlogPost } from '../data/blogs';
 import { DESSERT_ITEMS } from '../data/desserts';
 import { TESTIMONIALS, KITCHEN_PILLARS } from '../data/testimonials';
 import { KbTreatsLogo } from './KbTreatsLogo';
+import { OptimizedImage } from './OptimizedImage';
 
 interface HomeViewProps {
   onNavigate: (page: NavigationPage) => void;
@@ -61,19 +62,27 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
 
               {/* Hero Action Buttons */}
               <div className="pt-2 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => onNavigate('blog')}
+                <a
+                  href="/journal"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('blog');
+                  }}
                   className="inline-flex items-center gap-2.5 px-7 py-3.5 text-sm font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer group active:scale-[0.98]"
                 >
                   <span>Read Our Blog</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
-                <button
-                  onClick={() => onNavigate('desserts')}
+                </a>
+                <a
+                  href="/desserts"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('desserts');
+                  }}
                   className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-[#2B0E1E] hover:text-[#5E123B] bg-[#F9EAF0] hover:bg-[#F3D3E0] border border-[#E9C3D3] rounded-full transition-colors cursor-pointer"
                 >
                   <span>Explore Our Desserts</span>
-                </button>
+                </a>
                 <a
                   href="https://www.instagram.com/kbtreats08?stkn=MTA5a3N3c3czam9yNA=="
                   target="_blank"
@@ -109,17 +118,11 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
             {/* Right Hero Visual with OG Badge (5 cols) */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFFDFE] bg-[#FBEFF4]">
-                <img
+                <OptimizedImage
                   src="/images/hero_bespoke_celebration_cake_1791370876379.jpg"
-                  alt="KB Treats Artisanal Celebration Cake"
+                  alt="KB Treats bespoke celebration cake featuring multi-tiered sponge, pastel buttercream swirls, and fresh floral garnishes"
                   loading="eager"
-                  onError={(e) => {
-                    const img = e.currentTarget;
-                    if (!img.dataset.retried) {
-                      img.dataset.retried = 'true';
-                      img.src = '/src/assets/images/hero_bespoke_celebration_cake_1791370876379.jpg';
-                    }
-                  }}
+                  fetchPriority="high"
                   className="w-full h-[430px] sm:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -220,18 +223,10 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
             >
               {/* Image Area */}
               <div className="relative h-60 overflow-hidden bg-[#FAF0F4]">
-                <img
+                <OptimizedImage
                   src={item.image}
-                  alt={item.name}
+                  alt={item.imageAlt || `${item.name} - handcrafted dessert by KB Treats`}
                   loading="lazy"
-                  onError={(e) => {
-                    const img = e.currentTarget;
-                    if (!img.dataset.retried) {
-                      img.dataset.retried = 'true';
-                      const filename = img.src.split('/').pop();
-                      if (filename) img.src = `/images/${filename}`;
-                    }
-                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full border border-[#F0D5E0] text-[11px] font-semibold text-[#5E123B]">
@@ -291,36 +286,36 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                 Explore 10 curated articles covering our brand journey, baking chemistry, flavor pairings, and custom cake artistry.
               </p>
             </div>
-            <button
-              onClick={() => onNavigate('blog')}
+            <a
+              href="/journal"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('blog');
+              }}
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#5E123B] hover:text-[#430926] transition-colors cursor-pointer group"
             >
               <span>Read All 10 Articles</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredArticles.map((post) => (
-              <article
+              <a
                 key={post.id}
-                onClick={() => onSelectBlog(post.slug)}
-                className="bg-white rounded-2xl overflow-hidden border border-[#F0D5E0] shadow-sm hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+                href={`/journal/${post.slug}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onSelectBlog(post.slug);
+                }}
+                className="bg-white rounded-2xl overflow-hidden border border-[#F0D5E0] shadow-sm hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between block text-left"
               >
                 <div>
                   <div className="h-48 overflow-hidden bg-[#FAF0F4] relative">
-                    <img
+                    <OptimizedImage
                       src={post.coverImage}
-                      alt={post.title}
+                      alt={post.coverImageAlt || post.title}
                       loading="lazy"
-                      onError={(e) => {
-                        const img = e.currentTarget;
-                        if (!img.dataset.retried) {
-                          img.dataset.retried = 'true';
-                          const filename = img.src.split('/').pop();
-                          if (filename) img.src = `/images/${filename}`;
-                        }
-                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -345,7 +340,7 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                   <span>Read Article</span>
                   <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>

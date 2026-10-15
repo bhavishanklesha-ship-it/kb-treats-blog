@@ -230,24 +230,28 @@ export function ArticleReaderModal({
               Every dessert at KB Treats is baked fresh to order using pure ingredients and tailored to your guest count, flavor palate, and event theme. Contact us directly at <strong>98925 79948</strong> or <strong>79775 52009</strong>.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
-              <button
-                onClick={() => {
+              <a
+                href="/custom-orders"
+                onClick={(e) => {
+                  e.preventDefault();
                   onClose();
                   onNavigate('custom-orders');
                 }}
                 className="px-5 py-2.5 text-xs font-semibold text-[#2B081A] bg-[#FCEEF3] hover:bg-white rounded-full transition-colors cursor-pointer"
               >
                 Inquire for Custom Order
-              </button>
-              <button
-                onClick={() => {
+              </a>
+              <a
+                href="/desserts"
+                onClick={(e) => {
+                  e.preventDefault();
                   onClose();
                   onNavigate('desserts');
                 }}
                 className="px-5 py-2.5 text-xs font-semibold text-white border border-[#5E123B] hover:bg-[#430926] rounded-full transition-colors cursor-pointer"
               >
                 Explore All Desserts
-              </button>
+              </a>
             </div>
           </div>
 
@@ -258,14 +262,16 @@ export function ArticleReaderModal({
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedPosts.map((related) => (
-                <button
+                <a
                   key={related.id}
-                  onClick={() => {
+                  href={`/journal/${related.slug}`}
+                  onClick={(e) => {
+                    e.preventDefault();
                     onSelectBlog(related.slug);
                     const container = document.getElementById('article-content-container');
                     if (container) container.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="text-left bg-white p-4 rounded-xl border border-[#F0D5E0] hover:border-[#5E123B] transition-all hover:shadow-sm cursor-pointer group flex flex-col justify-between"
+                  className="text-left bg-white p-4 rounded-xl border border-[#F0D5E0] hover:border-[#5E123B] transition-all hover:shadow-sm cursor-pointer group flex flex-col justify-between block"
                 >
                   <div className="space-y-1.5">
                     <span className="text-[11px] font-semibold text-[#5E123B]">
@@ -279,7 +285,7 @@ export function ArticleReaderModal({
                     <span>{related.readTime}</span>
                     <ChevronRight className="w-3.5 h-3.5 text-[#5E123B] group-hover:translate-x-0.5 transition-transform" />
                   </div>
-                </button>
+                </a>
               ))}
             </div>
           </div>
