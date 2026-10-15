@@ -32,7 +32,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     publishedDate: 'October 2, 2026',
     author: 'Bhavisha, Founder of KB Treats',
-    coverImage: '/src/assets/images/bakers_kitchen_story_1791348346164.jpg',
+    coverImage: '/images/bakers_kitchen_story_1791348346164.jpg',
     excerpt: 'KB Treats did not begin with commercial equipment or sterile factory lines; it began with the gentle hum of an electric hand mixer, the irresistible perfume of browning butter, and the sheer joy of watching friends take their first bite.',
     keyTakeaways: [
       'Started as a homegrown passion project fueled by a love for unadulterated baking.',
@@ -77,7 +77,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read',
     publishedDate: 'September 28, 2026',
     author: 'KB Treats Bakery Team',
-    coverImage: '/src/assets/images/anniversary_photo_floral_cake_1791370942662.jpg',
+    coverImage: '/images/anniversary_photo_floral_cake_1791370942662.jpg',
     excerpt: 'Ever wonder why a dessert from a specialized homegrown kitchen tastes incomparably more vibrant than a shelf-bought counterpart? Discover the fascinating science of fresh baking.',
     keyTakeaways: [
       'Volatile aromatic flavor compounds dissipate within 48 to 72 hours of baking.',
@@ -121,7 +121,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '7 min read',
     publishedDate: 'September 22, 2026',
     author: 'Bhavisha, Founder of KB Treats',
-    coverImage: '/src/assets/images/cake_decorating_artistry_1791348365285.jpg',
+    coverImage: '/images/cake_decorating_artistry_1791348365285.jpg',
     excerpt: 'Whether you dream of a whimsical meadow floral cake, a vintage Lambeth piping masterpiece, or a sleek minimalist modern tier, learn the collaborative process behind custom cake design.',
     keyTakeaways: [
       'Custom cakes are tailored to the venue, guest count, aesthetic theme, and flavor profile.',
@@ -166,7 +166,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     publishedDate: 'September 15, 2026',
     author: 'KB Treats Flavor Lab',
-    coverImage: '/src/assets/images/cookies_cupcakes_assortment_1791347579750.jpg',
+    coverImage: '/images/cookies_cupcakes_assortment_1791347579750.jpg',
     excerpt: 'Explore the thoughtful flavor pairings crafted in the KB Treats kitchen—from roasted hazelnut praline to tangy berry reductions and salted caramel crunch.',
     keyTakeaways: [
       'Balance sweet components with acidity (berries, citrus) or mineral salt for multi-dimensional tasting.',
@@ -212,7 +212,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read',
     publishedDate: 'September 08, 2026',
     author: 'KB Treats Kitchen Team',
-    coverImage: '/src/assets/images/brownies_brookies_stack_1791347558371.jpg',
+    coverImage: '/images/brownies_brookies_stack_1791347558371.jpg',
     excerpt: 'Fudgy, crinkly brownie or chewy, golden cookie-brownie hybrid? We break down the textures, flavor profiles, and ideal serving scenarios for both favorites.',
     keyTakeaways: [
       'Brownies offer pure, unadulterated, deep cocoa intensity with a fudgy chew.',
@@ -256,7 +256,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     publishedDate: 'August 30, 2026',
     author: 'Bhavisha, Founder of KB Treats',
-    coverImage: '/src/assets/images/basque_cheesecake_slice_1791347568824.jpg',
+    coverImage: '/images/basque_cheesecake_slice_1791347568824.jpg',
     excerpt: 'Unlike heavy sponges or cloying confections, a masterfully crafted cheesecake offers refreshing acidity, velvety richness, and an unmatched sensory elegance.',
     keyTakeaways: [
       'Cheesecake naturally balances sweetness with cultured lactic tang, making it enjoyable even after rich meals.',
@@ -300,7 +300,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read',
     publishedDate: 'August 21, 2026',
     author: 'KB Treats Bakery Team',
-    coverImage: '/src/assets/images/mini_cookie_trays_baked_1791348938467.jpg',
+    coverImage: '/images/mini_cookie_trays_baked_1791348938467.jpg',
     excerpt: 'You do not always need a three-tiered cake to celebrate. Discover why handheld treats like cookies and cupcakes are the unsung heroes of gatherings.',
     keyTakeaways: [
       'Petite desserts allow guests to sample multiple flavors without committing to a single giant slice.',
@@ -344,7 +344,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     publishedDate: 'August 14, 2026',
     author: 'Bhavisha, Founder of KB Treats',
-    coverImage: '/src/assets/images/cookie_tin_two_in_one_og_1791350553246.jpg',
+    coverImage: '/images/cookie_tin_two_in_one_og_1791350553246.jpg',
     excerpt: 'In baking, there is nowhere to hide poor ingredients. Step behind the scenes at KB Treats to see why our ingredient pantry is our greatest point of pride.',
     keyTakeaways: [
       'Butter provides pure dairy fats that melt at human body temperature for a clean mouthfeel.',
@@ -389,7 +389,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     publishedDate: 'August 06, 2026',
     author: 'KB Treats Celebration Team',
-    coverImage: '/src/assets/images/cookies_cupcakes_assortment_1791347579750.jpg',
+    coverImage: '/images/cookies_cupcakes_assortment_1791347579750.jpg',
     excerpt: 'Planning an intimate candlelit dinner or a bustling 50-guest garden party? Learn how to calculate portions, match event themes, and select the ideal dessert format.',
     keyTakeaways: [
       'Determine your serving style: plated dessert, formal cake cutting, or standing finger food dessert bar.',
@@ -433,7 +433,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '7 min read',
     publishedDate: 'July 28, 2026',
     author: 'Bhavisha, Founder of KB Treats',
-    coverImage: '/src/assets/images/hero_celebration_cake_1791347545940.jpg',
+    coverImage: '/images/hero_celebration_cake_1791347545940.jpg',
     excerpt: 'Tagline: "From Our Kitchen to Your Celebration." Discover what that phrase means to us every single day as we bake, frost, package, and celebrate alongside you.',
     keyTakeaways: [
       'We treat every order as a personal invitation into your family’s most sacred milestones.',

@@ -110,9 +110,16 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFFDFE] bg-[#FBEFF4]">
                 <img
-                  src="/src/assets/images/hero_bespoke_celebration_cake_1791370876379.jpg"
+                  src="/images/hero_bespoke_celebration_cake_1791370876379.jpg"
                   alt="KB Treats Artisanal Celebration Cake"
-                  referrerPolicy="no-referrer"
+                  loading="eager"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (!img.dataset.retried) {
+                      img.dataset.retried = 'true';
+                      img.src = '/src/assets/images/hero_bespoke_celebration_cake_1791370876379.jpg';
+                    }
+                  }}
                   className="w-full h-[430px] sm:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -216,7 +223,15 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                 <img
                   src={item.image}
                   alt={item.name}
-                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (!img.dataset.retried) {
+                      img.dataset.retried = 'true';
+                      const filename = img.src.split('/').pop();
+                      if (filename) img.src = `/images/${filename}`;
+                    }
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full border border-[#F0D5E0] text-[11px] font-semibold text-[#5E123B]">
@@ -297,7 +312,15 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                     <img
                       src={post.coverImage}
                       alt={post.title}
-                      referrerPolicy="no-referrer"
+                      loading="lazy"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (!img.dataset.retried) {
+                          img.dataset.retried = 'true';
+                          const filename = img.src.split('/').pop();
+                          if (filename) img.src = `/images/${filename}`;
+                        }
+                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

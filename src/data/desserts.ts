@@ -22,7 +22,7 @@ export const DESSERT_ITEMS: DessertItem[] = [
     flavours: ['Double Dark Chocolate Gooey', 'Classic Golden Choc-Chip', 'Sea Salt Brown-Butter', 'Nutella-Stuffed Center'],
     customizationOptions: ['Curated celebration tin with custom ribbon', 'Personalized greeting message card inside', 'Choice of cookie flavor split (50/50 or custom)', 'Bulk corporate & festive gift tins'],
     idealOccasion: 'Festive hampers, Diwali & holiday gifting, birthday surprises, thoughtful gestures',
-    image: '/src/assets/images/cookie_tin_two_in_one_og_1791350553246.jpg',
+    image: '/images/cookie_tin_two_in_one_og_1791350553246.jpg',
     servingSuggestion: 'Warm gently for 10-12 seconds for an ultra-gooey, molten center with a cup of hot espresso or tea.',
     features: ['Signature royal burgundy tin', 'Aged brown-butter dough', 'Pure Belgian chocolate chunks']
   },
@@ -35,7 +35,7 @@ export const DESSERT_ITEMS: DessertItem[] = [
     flavours: ['Fudgy Roasted Walnut & Dark Choc', 'Signature Triple Chocolate', 'Fleur de Sel Salted Caramel Ribbon', 'Nutella Swirl Brownie'],
     customizationOptions: ['Round sharing tin or individual squares', 'Custom greeting message piped in white chocolate', 'Gift ribbon packaging & personalized note cards', 'Extra walnut or hazelnut toppings'],
     idealOccasion: 'Comfort dessert cravings, family movie nights, housewarming tokens, festive hampers',
-    image: '/src/assets/images/brownie_tub_tin_scoop_1791348925707.jpg',
+    image: '/images/brownie_tub_tin_scoop_1791348925707.jpg',
     servingSuggestion: 'Scoop warm directly from the tin and pair with a scoop of Madagascar vanilla bean ice cream.',
     features: ['Melted couverture chocolate base', 'Crackle top achieved by hand aeration', 'No artificial cocoa powders or oils']
   },
@@ -48,7 +48,7 @@ export const DESSERT_ITEMS: DessertItem[] = [
     flavours: ['Classic Brown-Butter Choc Chip', 'Triple Dark Chocolate Chip', 'Sea Salt & Caramelized Pecan', 'Red Velvet White Choc'],
     customizationOptions: ['Set of 6, 12, or 24 individual mini bake tins', 'Party return gift packaging with custom tags', 'Warm-and-eat celebration packs'],
     idealOccasion: 'Kids parties, dessert grazing tables, office celebrations, high-tea platters',
-    image: '/src/assets/images/mini_cookie_trays_baked_1791348938467.jpg',
+    image: '/images/mini_cookie_trays_baked_1791348938467.jpg',
     servingSuggestion: 'Enjoy straight from the tin at room temperature or warm for 8 seconds for a melty bite.',
     features: ['Freshly baked in individual tins', 'Slow-browned European butter', 'Real chocolate chips']
   },
@@ -61,7 +61,7 @@ export const DESSERT_ITEMS: DessertItem[] = [
     flavours: ['Belgian Dark Chocolate Ganache', 'Tahitian Vanilla & Raspberry Coulis', 'Salted Butter Caramel Crunch', 'Lotus Biscoff Dream', 'Rich Red Velvet with Cream Cheese'],
     customizationOptions: ['Tiered architecture & heights', 'Textured Lambeth or modern minimalist frosting', 'Fresh edible florals & berries', 'Hand-piped personalized messages & toppers', 'Thematic color palettes to match event decor'],
     idealOccasion: 'Birthdays, Anniversaries, Weddings, Engagements, Milestone Gatherings',
-    image: '/src/assets/images/white_pearl_floral_cake_1791370974897.jpg',
+    image: '/images/white_pearl_floral_cake_1791370974897.jpg',
     servingSuggestion: 'Best enjoyed at room temperature for the creamiest frosting mouthfeel. Slice with a warmed chef knife.',
     features: ['100% freshly baked to order', 'Never frozen sponge layers', 'Real European butter & natural vanillas']
   },
@@ -74,7 +74,7 @@ export const DESSERT_ITEMS: DessertItem[] = [
     flavours: ['San Sebastián Basque Burnt', 'Wild Berry Compote New York', 'Lotus Biscoff Crunch Cheesecake', 'Dark Chocolate Truffle Cheesecake', 'Tangy Mango Passionfruit (Seasonal)'],
     customizationOptions: ['6-inch and 8-inch round formats', 'Custom berry crowns or toasted nuts', 'Seasonal fruit compotes on the side', 'Personalized celebration plaques'],
     idealOccasion: 'Intimate dinner parties, celebratory family dinners, Sunday brunches',
-    image: '/src/assets/images/dark_chocolate_gold_cake_1791370917497.jpg',
+    image: '/images/dark_chocolate_gold_cake_1791370917497.jpg',
     servingSuggestion: 'Refrigerate until 20 minutes before serving so the custard core reaches peak creaminess.',
     features: ['Premium cream cheese & heavy cream', 'Slow water-bath or high-heat caramelized bake', 'Handmade fruit reductions']
   },
@@ -87,7 +87,7 @@ export const DESSERT_ITEMS: DessertItem[] = [
     flavours: ['Classic Chocolate Chip & Fudge', 'Double Dark & Sea Salt Brookie', 'White Choc Raspberry Brookie', 'Caramel Drizzle Brookie'],
     customizationOptions: ['Celebration slab brookies with custom messages', 'Party finger bites for dessert tables', 'Mini gift boxes for party return favours'],
     idealOccasion: 'Weekend gatherings, movie nights, game days, dessert platters',
-    image: '/src/assets/images/spoonable_brownie_tin_scoop_1791370898954.jpg',
+    image: '/images/spoonable_brownie_tin_scoop_1791370898954.jpg',
     servingSuggestion: 'Serve slightly warm with a glass of cold milk or freshly brewed flat white.',
     features: ['Slow-browned butter cookie dough', 'Dense chocolate base', 'Crisp edges with gooey centers']
   }

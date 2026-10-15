@@ -71,7 +71,15 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
               <img
                 src={heroPost.coverImage}
                 alt={heroPost.title}
-                referrerPolicy="no-referrer"
+                loading="eager"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (!img.dataset.retried) {
+                    img.dataset.retried = 'true';
+                    const filename = img.src.split('/').pop();
+                    if (filename) img.src = `/images/${filename}`;
+                  }
+                }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1 rounded-full text-xs font-semibold text-[#5E123B] border border-[#F0D5E0]">
@@ -198,7 +206,15 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
                     <img
                       src={post.coverImage}
                       alt={post.title}
-                      referrerPolicy="no-referrer"
+                      loading="lazy"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (!img.dataset.retried) {
+                          img.dataset.retried = 'true';
+                          const filename = img.src.split('/').pop();
+                          if (filename) img.src = `/images/${filename}`;
+                        }
+                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full border border-[#F0D5E0] text-[11px] font-semibold text-[#5E123B]">

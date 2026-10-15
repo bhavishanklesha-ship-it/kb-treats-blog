@@ -81,9 +81,16 @@ export function AboutView({ onNavigate }: AboutViewProps) {
           <div className="lg:col-span-6 relative">
             <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-[#FCEEF3]">
               <img
-                src="/src/assets/images/cookie_tin_two_in_one_og_1791350553246.jpg"
+                src="/images/cookie_tin_two_in_one_og_1791350553246.jpg"
                 alt="KB Treats Signature 2 in 1 Gooey Cookie Tin"
-                referrerPolicy="no-referrer"
+                loading="eager"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (!img.dataset.retried) {
+                    img.dataset.retried = 'true';
+                    img.src = '/src/assets/images/cookie_tin_two_in_one_og_1791350553246.jpg';
+                  }
+                }}
                 className="w-full h-[450px] object-cover"
               />
             </div>

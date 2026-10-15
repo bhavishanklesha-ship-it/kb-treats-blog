@@ -89,7 +89,15 @@ export function DessertsView({ onNavigate, onSelectCustomDessert }: DessertsView
                   <img
                     src={item.image}
                     alt={item.name}
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (!img.dataset.retried) {
+                        img.dataset.retried = 'true';
+                        const filename = img.src.split('/').pop();
+                        if (filename) img.src = `/images/${filename}`;
+                      }
+                    }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full border border-[#F0D5E0] text-[11px] font-semibold text-[#5E123B]">
@@ -197,7 +205,15 @@ export function DessertsView({ onNavigate, onSelectCustomDessert }: DessertsView
               <img
                 src={activeItemModal.image}
                 alt={activeItemModal.name}
-                referrerPolicy="no-referrer"
+                loading="eager"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (!img.dataset.retried) {
+                    img.dataset.retried = 'true';
+                    const filename = img.src.split('/').pop();
+                    if (filename) img.src = `/images/${filename}`;
+                  }
+                }}
                 className="w-full h-full object-cover"
               />
             </div>

@@ -133,7 +133,15 @@ export function ArticleReaderModal({
             <img
               src={post.coverImage}
               alt={post.title}
-              referrerPolicy="no-referrer"
+              loading="eager"
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.dataset.retried) {
+                  img.dataset.retried = 'true';
+                  const filename = img.src.split('/').pop();
+                  if (filename) img.src = `/images/${filename}`;
+                }
+              }}
               className="w-full h-64 sm:h-96 object-cover"
             />
           </div>
