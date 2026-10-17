@@ -1,6 +1,7 @@
 import { Heart, Sparkles, ShieldCheck, Check, ArrowRight, Award, Coffee, BookOpen } from 'lucide-react';
 import { NavigationPage } from './Navbar';
 import { KbTreatsLogo } from './KbTreatsLogo';
+import { OptimizedImage } from './OptimizedImage';
 
 interface AboutViewProps {
   onNavigate: (page: NavigationPage) => void;
@@ -80,17 +81,10 @@ export function AboutView({ onNavigate }: AboutViewProps) {
 
           <div className="lg:col-span-6 relative">
             <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-[#FCEEF3]">
-              <img
+              <OptimizedImage
                 src="/images/cookie_tin_two_in_one_og_1791350553246.jpg"
-                alt="KB Treats Signature 2 in 1 Gooey Cookie Tin"
+                alt="Founder Bhavisha's signature KB Treats 2-in-1 gooey dark chocolate and golden cookie tin handcrafted in Mumbai"
                 loading="eager"
-                onError={(e) => {
-                  const img = e.currentTarget;
-                  if (!img.dataset.retried) {
-                    img.dataset.retried = 'true';
-                    img.src = '/src/assets/images/cookie_tin_two_in_one_og_1791350553246.jpg';
-                  }
-                }}
                 className="w-full h-[450px] object-cover"
               />
             </div>
@@ -200,9 +194,10 @@ export function AboutView({ onNavigate }: AboutViewProps) {
                 onNavigate('blog');
               }}
               className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold text-[#2B081A] bg-[#FCEEF3] hover:bg-white rounded-full transition-colors cursor-pointer"
+              aria-label="Read our baking journal articles and stories"
             >
               <BookOpen className="w-4 h-4" />
-              <span>Read Our Blog</span>
+              <span>Read Our Baking Journal</span>
             </a>
             <a
               href="/custom-orders"
@@ -211,6 +206,7 @@ export function AboutView({ onNavigate }: AboutViewProps) {
                 onNavigate('custom-orders');
               }}
               className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold text-white bg-[#5E123B] hover:bg-[#7A1C4F] rounded-full transition-colors cursor-pointer"
+              aria-label="Plan a custom cake or dessert order with KB Treats"
             >
               <span>Plan a Custom Order</span>
               <ArrowRight className="w-4 h-4" />

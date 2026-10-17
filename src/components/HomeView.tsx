@@ -69,8 +69,9 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                     onNavigate('blog');
                   }}
                   className="inline-flex items-center gap-2.5 px-7 py-3.5 text-sm font-semibold text-white bg-[#5E123B] hover:bg-[#430926] rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer group active:scale-[0.98]"
+                  aria-label="Read our baking journal articles and stories"
                 >
-                  <span>Read Our Blog</span>
+                  <span>Read Our Baking Journal</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a
@@ -80,6 +81,7 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                     onNavigate('desserts');
                   }}
                   className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-[#2B0E1E] hover:text-[#5E123B] bg-[#F9EAF0] hover:bg-[#F3D3E0] border border-[#E9C3D3] rounded-full transition-colors cursor-pointer"
+                  aria-label="Explore our artisanal dessert menu"
                 >
                   <span>Explore Our Desserts</span>
                 </a>
@@ -88,6 +90,7 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-3.5 text-xs font-semibold text-[#5E123B] hover:bg-[#FCEEF3] rounded-full transition-colors cursor-pointer"
+                  aria-label="Follow KB Treats on Instagram @kbtreats08"
                 >
                   <Instagram className="w-4 h-4" />
                   <span>@kbtreats08</span>
@@ -293,8 +296,9 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                 onNavigate('blog');
               }}
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#5E123B] hover:text-[#430926] transition-colors cursor-pointer group"
+              aria-label="Explore all 10 baking journal articles from KB Treats"
             >
-              <span>Read All 10 Articles</span>
+              <span>Explore All 10 Journal Articles</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
@@ -309,6 +313,7 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                   onSelectBlog(post.slug);
                 }}
                 className="bg-white rounded-2xl overflow-hidden border border-[#F0D5E0] shadow-sm hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between block text-left"
+                aria-label={`Read story: ${post.title}`}
               >
                 <div>
                   <div className="h-48 overflow-hidden bg-[#FAF0F4] relative">
@@ -337,7 +342,7 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                 </div>
 
                 <div className="p-6 pt-0 border-t border-[#F0D5E0]/60 mt-4 flex items-center justify-between text-xs font-semibold text-[#5E123B] pt-4">
-                  <span>Read Article</span>
+                  <span>Read Story</span>
                   <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </a>

@@ -3,6 +3,7 @@ import { Search, Clock, Calendar, ChevronRight, BookOpen, Sparkles, Filter } fro
 import { BLOG_POSTS, BlogPost } from '../data/blogs';
 import { NavigationPage } from './Navbar';
 import { KbTreatsLogo } from './KbTreatsLogo';
+import { OptimizedImage } from './OptimizedImage';
 
 interface BlogViewProps {
   onSelectBlog: (slug: string) => void;
@@ -69,21 +70,14 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
               onSelectBlog(heroPost.slug);
             }}
             className="bg-white rounded-3xl overflow-hidden border border-[#F0D5E0] shadow-md hover:shadow-xl transition-all cursor-pointer group grid grid-cols-1 lg:grid-cols-12 block text-left"
+            aria-label={`Read spotlight story: ${heroPost.title}`}
           >
             {/* Image (7 cols) */}
             <div className="lg:col-span-7 h-72 sm:h-96 lg:h-full relative overflow-hidden bg-[#FAF0F4]">
-              <img
+              <OptimizedImage
                 src={heroPost.coverImage}
-                alt={heroPost.title}
+                alt={heroPost.coverImageAlt || heroPost.title}
                 loading="eager"
-                onError={(e) => {
-                  const img = e.currentTarget;
-                  if (!img.dataset.retried) {
-                    img.dataset.retried = 'true';
-                    const filename = img.src.split('/').pop();
-                    if (filename) img.src = `/images/${filename}`;
-                  }
-                }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1 rounded-full text-xs font-semibold text-[#5E123B] border border-[#F0D5E0]">
@@ -208,21 +202,14 @@ export function BlogView({ onSelectBlog, onNavigate }: BlogViewProps) {
                   onSelectBlog(post.slug);
                 }}
                 className="bg-white rounded-2xl overflow-hidden border border-[#F0D5E0] shadow-sm hover:shadow-lg transition-all cursor-pointer group flex flex-col justify-between block text-left"
+                aria-label={`Read story: ${post.title}`}
               >
                 <div>
                   <div className="h-52 overflow-hidden bg-[#FAF0F4] relative">
-                    <img
+                    <OptimizedImage
                       src={post.coverImage}
-                      alt={post.title}
+                      alt={post.coverImageAlt || post.title}
                       loading="lazy"
-                      onError={(e) => {
-                        const img = e.currentTarget;
-                        if (!img.dataset.retried) {
-                          img.dataset.retried = 'true';
-                          const filename = img.src.split('/').pop();
-                          if (filename) img.src = `/images/${filename}`;
-                        }
-                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full border border-[#F0D5E0] text-[11px] font-semibold text-[#5E123B]">

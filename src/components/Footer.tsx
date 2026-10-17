@@ -74,7 +74,7 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#350A20] hover:bg-[#5E123B] text-[#F9EAF0] hover:text-white transition-colors cursor-pointer text-xs border border-[#521234]"
-                aria-label="Instagram @kbtreats08"
+                aria-label="Follow KB Treats on Instagram @kbtreats08"
               >
                 <Instagram className="w-3.5 h-3.5" />
                 <span>@kbtreats08</span>
@@ -84,14 +84,14 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-[#350A20] hover:bg-emerald-700 flex items-center justify-center text-[#F9EAF0] hover:text-white transition-colors cursor-pointer border border-[#521234]"
-                aria-label="WhatsApp KB Treats"
+                aria-label="Chat with KB Treats on WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="mailto:hello@kbtreats.com"
                 className="w-8 h-8 rounded-full bg-[#350A20] hover:bg-[#5E123B] flex items-center justify-center text-[#F9EAF0] hover:text-white transition-colors cursor-pointer border border-[#521234]"
-                aria-label="Email KB Treats"
+                aria-label="Email KB Treats at hello@kbtreats.com"
               >
                 <Mail className="w-4 h-4" />
               </a>
@@ -194,6 +194,7 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
                     onSelectBlog(post.slug);
                   }}
                   className="text-left block group cursor-pointer"
+                  aria-label={`Read story: ${post.title}`}
                 >
                   <p className="text-xs text-[#E5BFCE] group-hover:text-white line-clamp-1 transition-colors font-medium">
                     {post.title}
@@ -210,8 +211,9 @@ export function Footer({ onNavigate, onSelectBlog }: FooterProps) {
                   onNavigate('blog');
                 }}
                 className="text-xs text-[#F3CAD8] hover:text-white font-medium inline-flex items-center gap-1 pt-1 cursor-pointer"
+                aria-label="Explore all 10 stories from the KB Treats baking journal"
               >
-                <span>Read all 10 stories</span>
+                <span>Explore all 10 journal stories</span>
                 <span>&rarr;</span>
               </a>
             </div>

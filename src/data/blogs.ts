@@ -23,6 +23,7 @@ export interface BlogPost {
   sections: BlogSection[];
   conclusion: string;
   relatedDessertId?: string;
+  relatedSlugs?: string[];
   tags: string[];
 }
 
@@ -74,6 +75,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'KB Treats remains proud of its homegrown roots. We carry the same intimacy and devotion into every birthday, anniversary, and spontaneous sweet craving that we had on our very first bake. Thank you for welcoming our kitchen into your most cherished celebrations.',
     relatedDessertId: 'custom-celebration-cakes',
+    relatedSlugs: ['kitchen-to-celebration-experience', 'real-premium-ingredients', 'why-fresh-baked-tastes-better'],
     tags: ['Brand Story', 'Baking Journey', 'Homegrown Bakery', 'Philosophy']
   },
   {
@@ -122,6 +124,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'Freshness isn’t just a marketing buzzword—it is the cornerstone of great flavor. By reserving your treats ahead of time, you give us the window to bake your desserts fresh, ensuring your celebratory bites are as tender and memorable as possible.',
     relatedDessertId: 'fudgy-belgian-brownies',
+    relatedSlugs: ['real-premium-ingredients', 'brownies-vs-brookies', 'story-behind-kb-treats'],
     tags: ['Baking Science', 'Fresh Desserts', 'Artisanal Quality', 'Flavor Nuances']
   },
   {
@@ -171,6 +174,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'Your celebration deserves more than an off-the-rack supermarket cake. With KB Treats, you collaborate with an artisan who cares as deeply about your milestone memories as you do.',
     relatedDessertId: 'custom-celebration-cakes',
+    relatedSlugs: ['celebration-cake-flavours', 'choose-perfect-dessert', 'kitchen-to-celebration-experience'],
     tags: ['Custom Cakes', 'Cake Design', 'Celebration Decor', 'Bespoke Baking']
   },
   {
@@ -221,6 +225,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'Every slice of cake should feel like a reward. At KB Treats, flavor development is an ongoing passion, ensuring your guests leave your party asking, "Where on earth did you get that cake?"',
     relatedDessertId: 'custom-celebration-cakes',
+    relatedSlugs: ['custom-cake-design-guide', 'cheesecake-for-every-occasion', 'choose-perfect-dessert'],
     tags: ['Cake Flavors', 'Gourmet Pastry', 'Taste Pairing', 'KB Treats Signatures']
   },
   {
@@ -269,6 +274,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'The real secret? At KB Treats, you don’t actually have to choose. Our assorted celebration boxes allow you to pair freshly baked brownies with signature brookies side by side so everyone gets their dream treat.',
     relatedDessertId: 'artisan-brookies',
+    relatedSlugs: ['cookies-cupcakes-small-desserts', 'why-fresh-baked-tastes-better', 'real-premium-ingredients'],
     tags: ['Brownies', 'Brookies', 'Chocolate Lovers', 'Dessert Comparison']
   },
   {
@@ -317,6 +323,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'Whether you are commemorating an anniversary or simply gathering around the Sunday table with family, a handcrafted cheesecake from KB Treats turns an ordinary evening into an extraordinary memory.',
     relatedDessertId: 'silky-cheesecakes',
+    relatedSlugs: ['celebration-cake-flavours', 'choose-perfect-dessert', 'real-premium-ingredients'],
     tags: ['Cheesecake', 'Basque Burnt', 'Gourmet Desserts', 'Entertaining']
   },
   {
@@ -365,6 +372,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'Sometimes the smallest gestures yield the warmest smiles. Explore the joy of our cookie assortments and custom cupcakes for your next family tea, bridal shower, or afternoon pick-me-up.',
     relatedDessertId: 'gourmet-cookies',
+    relatedSlugs: ['brownies-vs-brookies', 'choose-perfect-dessert', 'real-premium-ingredients'],
     tags: ['Cookies', 'Cupcakes', 'Party Planning', 'Bite-Sized Treats']
   },
   {
@@ -414,6 +422,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'We consider our ingredient standards a sacred trust with our customers. When you honor an occasion with KB Treats, you can be completely confident in the integrity of every crumb.',
     relatedDessertId: 'fudgy-belgian-brownies',
+    relatedSlugs: ['why-fresh-baked-tastes-better', 'story-behind-kb-treats', 'brownies-vs-brookies'],
     tags: ['Quality Ingredients', 'Belgian Chocolate', 'Real Vanilla', 'Artisan Standards']
   },
   {
@@ -462,6 +471,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'A well-chosen dessert brings harmony to your entire event. When in doubt, reach out to the KB Treats kitchen—we love helping you orchestrate the sweetest memory for your celebration.',
     relatedDessertId: 'custom-celebration-cakes',
+    relatedSlugs: ['custom-cake-design-guide', 'cookies-cupcakes-small-desserts', 'celebration-cake-flavours'],
     tags: ['Event Planning', 'Host Guide', 'Portion Guide', 'Custom Orders']
   },
   {
@@ -511,6 +521,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     conclusion: 'Whatever milestone is on your calendar, we are ready to pour our heart into your dessert. Reach out to our kitchen, share your vision, and let’s create something breathtaking together.',
     relatedDessertId: 'custom-celebration-cakes',
+    relatedSlugs: ['story-behind-kb-treats', 'custom-cake-design-guide', 'choose-perfect-dessert'],
     tags: ['KB Treats Experience', 'Heart of Baking', 'Celebration Memories', 'Homegrown Brand']
   }
 ];

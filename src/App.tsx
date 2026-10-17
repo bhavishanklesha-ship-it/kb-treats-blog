@@ -12,7 +12,7 @@ import { BlogView } from './components/BlogView';
 import { DessertsView } from './components/DessertsView';
 import { CustomOrdersView } from './components/CustomOrdersView';
 import { ContactView } from './components/ContactView';
-import { ArticleReaderModal } from './components/ArticleReaderModal';
+import { BlogPostView } from './components/BlogPostView';
 import { BlogPost, findBlogPost } from './data/blogs';
 
 function parseRoute(): { page: NavigationPage; articleSlug: string | null } {
@@ -196,6 +196,7 @@ export default function App() {
   const handleSelectBlog = useCallback((slug: string) => {
     const found = findBlogPost(slug);
     const cleanSlug = found ? found.slug : slug;
+    setCurrentPage('blog');
     setActiveBlogSlug(cleanSlug);
     const targetPath = `/journal/${cleanSlug}`;
     if (window.location.pathname !== targetPath) {
@@ -203,14 +204,6 @@ export default function App() {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
-
-  const handleCloseArticle = useCallback(() => {
-    setActiveBlogSlug(null);
-    const targetPath = currentPage === 'home' ? '/' : currentPage === 'blog' ? '/journal' : `/${currentPage}`;
-    if (window.location.pathname !== targetPath) {
-      window.history.pushState(null, '', targetPath);
-    }
-  }, [currentPage]);
 
   const handleSelectCustomDessert = useCallback((dessertName: string) => {
     setPrefilledCustomDessert(dessertName);
@@ -226,51 +219,53 @@ export default function App() {
 
       {/* Main View Area */}
       <main className="flex-1">
-        {currentPage === 'home' && (
-          <HomeView
-            onNavigate={handleNavigate}
-            onSelectBlog={handleSelectBlog}
-          />
-        )}
-
-        {currentPage === 'about' && (
-          <AboutView onNavigate={handleNavigate} />
-        )}
-
-        {currentPage === 'blog' && (
-          <BlogView
+        {activeArticle ? (
+          /* Dedicated Standalone Full Webpage for the Blog Article */
+          <BlogPostView
+            post={activeArticle}
             onSelectBlog={handleSelectBlog}
             onNavigate={handleNavigate}
           />
-        )}
+        ) : (
+          /* General Website Pages */
+          <>
+            {currentPage === 'home' && (
+              <HomeView
+                onNavigate={handleNavigate}
+                onSelectBlog={handleSelectBlog}
+              />
+            )}
 
-        {currentPage === 'desserts' && (
-          <DessertsView
-            onNavigate={handleNavigate}
-            onSelectCustomDessert={handleSelectCustomDessert}
-          />
-        )}
+            {currentPage === 'about' && (
+              <AboutView onNavigate={handleNavigate} />
+            )}
 
-        {currentPage === 'custom-orders' && (
-          <CustomOrdersView
-            prefilledDessertName={prefilledCustomDessert}
-          />
-        )}
+            {currentPage === 'blog' && (
+              <BlogView
+                onSelectBlog={handleSelectBlog}
+                onNavigate={handleNavigate}
+              />
+            )}
 
-        {currentPage === 'contact' && (
-          <ContactView />
+            {currentPage === 'desserts' && (
+              <DessertsView
+                onNavigate={handleNavigate}
+                onSelectCustomDessert={handleSelectCustomDessert}
+              />
+            )}
+
+            {currentPage === 'custom-orders' && (
+              <CustomOrdersView
+                prefilledDessertName={prefilledCustomDessert}
+              />
+            )}
+
+            {currentPage === 'contact' && (
+              <ContactView />
+            )}
+          </>
         )}
       </main>
-
-      {/* Reader Modal for In-depth Article Engagement */}
-      {activeArticle && (
-        <ArticleReaderModal
-          post={activeArticle}
-          onClose={handleCloseArticle}
-          onSelectBlog={handleSelectBlog}
-          onNavigate={handleNavigate}
-        />
-      )}
 
       {/* Brand Footer */}
       <Footer
