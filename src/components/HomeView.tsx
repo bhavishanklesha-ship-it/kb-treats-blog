@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Heart, ShieldCheck, Palette, Cake, Clock, ChevronRight, Star, Phone, Instagram } from 'lucide-react';
+import { ArrowRight, Sparkles, Heart, ShieldCheck, Palette, Cake, Clock, ChevronRight, Star, Phone, Instagram, HelpCircle, MessageCircle } from 'lucide-react';
 import { NavigationPage } from './Navbar';
 import { BLOG_POSTS, BlogPost } from '../data/blogs';
 import { DESSERT_ITEMS } from '../data/desserts';
@@ -164,10 +164,10 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
               The KB Treats Promise
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#2B0E1E]">
-              Why Celebrations Taste Sweeter With Us
+              Why Do Celebrations Taste Sweeter with KB Treats?
             </h2>
-            <p className="text-sm sm:text-base text-[#68374F]">
-              We bake with the same warmth and obsessive standards we hold for our own dining table.
+            <p className="text-sm sm:text-base text-[#68374F] max-w-2xl mx-auto leading-relaxed">
+              KB Treats bakes every single order from scratch in Mumbai on the morning of your event using 100% European cultured butter, pure Belgian chocolate, and real vanilla bean pods—delivering authentic homemade taste without artificial preservatives or pre-mixed powders.
             </p>
           </div>
 
@@ -386,9 +386,9 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
             <div className="lg:col-span-4 bg-[#3E0E27] border border-[#591438] p-6 rounded-2xl space-y-4">
               <div className="flex items-center gap-2">
                 <KbTreatsLogo size={36} />
-                <p className="text-xs font-serif font-bold text-[#F3CAD8] uppercase tracking-wider">
-                  How Custom Orders Work
-                </p>
+                <h3 className="text-xs font-serif font-bold text-[#F3CAD8] uppercase tracking-wider">
+                  How Do Custom Cake Orders Work with KB Treats?
+                </h3>
               </div>
               <ul className="space-y-3 text-xs text-[#F8E2EC]">
                 <li className="flex items-start gap-2.5">
@@ -453,6 +453,271 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions Section (Visible Above Footer, AEO & Preview Optimized) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="faq" aria-label="Frequently Asked Questions">
+        {/* Schema.org FAQPage Structured Data for Answer Engines */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'What makes KB Treats cakes and desserts different from commercial retail bakeries?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'KB Treats is a homegrown artisanal bakery in Mumbai that bakes strictly to order on the morning of your event using 100% European cultured dairy butter, pure Belgian couverture chocolate, and real Bourbon vanilla bean pods. We never pre-freeze sponges weeks in advance, never use chemical cake premixes, and reject margarine or palm oils.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How far in advance should I place an order for custom celebration cakes?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'We recommend reserving custom celebration cakes 3 to 7 days in advance to allow adequate time for flavor consultations, structural planning, and sourcing pesticide-free fresh flowers. For our signature 2-in-1 cookie gift tins, brownie tubs, and brookies, 24 to 48 hours notice is ideal.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Can KB Treats customize cake flavors and accommodate eggless dietary preferences?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. Every cake’s flavor profile, sweetness level, sponge density, and decoration are tailored to your celebration, with delicious 100% eggless options available upon request. We collaborate directly on custom flavor combinations, color palettes, and portion sizes.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How are freshly baked cakes delivered safely across Mumbai?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'All celebration cakes and desserts are packed in reinforced presentation boxes with sturdy, non-slip bases to prevent tilting or movement during car transit. Every order includes a care card with storage and slicing instructions, and we coordinate delivery timings directly with you.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What is your signature 2-in-1 gooey cookie tin?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Our signature 2-in-1 tin is a handcrafted gift box pairing two decadent cookie favorites: golden brown-butter chocolate chunk cookies and rich double-chocolate fudge cookies, baked with Belgian chocolate, pure dairy butter, and finished with flaky Maldon sea salt.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How should I store and serve KB Treats cakes, brookies, and cheesecakes?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'For maximum flavor, bring buttercream cakes to room temperature 30 to 45 minutes before slicing so the butter softens naturally. Fudgy brownies and brookies can be enjoyed at room temperature or warmed for 15 seconds. Basque cheesecakes should be kept chilled and served cool.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How do I place an order or consult on a custom cake design?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'You can consult with founder Bhavisha and our kitchen team via WhatsApp or phone at 98925 79948 / 79775 52009, or submit an inquiry through our online Custom Orders page with your event date, theme, and guest count.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Where is KB Treats located and what areas in Mumbai do you serve?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'KB Treats is a homegrown kitchen based in Mumbai. We bake strictly to order and deliver handcrafted celebration cakes, dessert tubs, cookie tins, and hampers across Mumbai for birthdays, weddings, anniversaries, and festive celebrations.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        <div className="bg-[#FAF0F4]/70 border border-[#F0D5E0] rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FCEEF3] border border-[#F0D5E0] text-[#5E123B] text-xs font-semibold tracking-wide">
+              <HelpCircle className="w-4 h-4 text-[#5E123B]" />
+              <span>Frequently Asked Questions</span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B0E1E] leading-tight">
+              What Should You Know Before Ordering from KB Treats?
+            </h2>
+            <p className="text-sm sm:text-base text-[#68374F] max-w-2xl mx-auto leading-relaxed">
+              Clear, direct answers regarding our artisanal ingredients, custom celebration cakes, ordering timelines, dietary accommodations, and delivery across Mumbai.
+            </p>
+          </div>
+
+          {/* Visible Question & Answer Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* FAQ 1 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q1
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    What makes KB Treats cakes and desserts different from commercial retail bakeries?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  KB Treats is a homegrown artisanal bakery in Mumbai that bakes strictly to order on the morning of your event using 100% European cultured dairy butter, pure Belgian couverture chocolate, and real Bourbon vanilla bean pods. We never pre-freeze sponges weeks in advance, never use chemical cake premixes, and reject margarine or palm oils.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q2
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    How far in advance should I place an order for custom celebration cakes?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  We recommend reserving custom celebration cakes 3 to 7 days in advance to allow adequate time for flavor consultations, structural planning, and sourcing pesticide-free fresh flowers. For our signature 2-in-1 cookie gift tins, brownie tubs, and brookies, 24 to 48 hours notice is ideal.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q3
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    Can KB Treats customize cake flavors and accommodate eggless dietary preferences?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  Yes. Every cake’s flavor profile, sweetness level, sponge density, and decoration are tailored to your celebration, with delicious 100% eggless options available upon request. We collaborate directly on custom flavor combinations, color palettes, and portion sizes.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q4
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    How are freshly baked cakes delivered safely across Mumbai?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  All celebration cakes and desserts are packed in reinforced presentation boxes with sturdy, non-slip bases to prevent tilting or movement during car transit. Every order includes a care card with storage and slicing instructions, and we coordinate delivery timings directly with you.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q5
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    What is your signature 2-in-1 gooey cookie tin?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  Our signature 2-in-1 tin is a handcrafted gift box pairing two decadent cookie favorites: golden brown-butter chocolate chunk cookies and rich double-chocolate fudge cookies, baked with Belgian chocolate, pure dairy butter, and finished with flaky Maldon sea salt.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q6
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    How should I store and serve KB Treats cakes, brookies, and cheesecakes?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  For maximum flavor, bring buttercream cakes to room temperature 30 to 45 minutes before slicing so the butter softens naturally. Fudgy brownies and brookies can be enjoyed at room temperature or warmed for 15 seconds. Basque cheesecakes should be kept chilled and served cool.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q7
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    How do I place an order or consult on a custom cake design?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  You can consult with founder Bhavisha and our kitchen team via WhatsApp or phone at 98925 79948 / 79775 52009, or submit an inquiry through our online Custom Orders page with your event date, theme, and guest count.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#F0D5E0] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <span className="w-7 h-7 rounded-xl bg-[#FCEEF3] text-[#5E123B] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-[#F0D5E0]">
+                    Q8
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#2B0E1E] leading-snug">
+                    Where is KB Treats located and what areas in Mumbai do you serve?
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5C3247] leading-relaxed pl-10">
+                  KB Treats is a homegrown kitchen based in Mumbai. We bake strictly to order and deliver handcrafted celebration cakes, dessert tubs, cookie tins, and hampers across Mumbai for birthdays, weddings, anniversaries, and festive celebrations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Help Bottom Strip */}
+          <div className="mt-10 pt-8 border-t border-[#F0D5E0] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div className="space-y-1">
+              <p className="font-serif text-base font-bold text-[#2B0E1E]">
+                Have a different question or need a personalized consultation?
+              </p>
+              <p className="text-xs text-[#68374F]">
+                Our kitchen team is available daily to discuss flavor pairings, guest counts, and design ideas.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://wa.me/919892579948?text=Hello%20KB%20Treats,%20I%20have%20a%20question%20about%20your%20cakes%20and%20desserts!"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white bg-emerald-700 hover:bg-emerald-800 rounded-full transition-colors cursor-pointer shadow-sm"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Chat on WhatsApp</span>
+              </a>
+              <button
+                onClick={() => onNavigate('custom-orders')}
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-[#5E123B] bg-white hover:bg-[#FCEEF3] border border-[#F0D5E0] rounded-full transition-colors cursor-pointer shadow-xs"
+              >
+                <span>Plan Custom Order</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>

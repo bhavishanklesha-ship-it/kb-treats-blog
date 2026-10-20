@@ -72,7 +72,10 @@ export function BlogPostView({ post, onSelectBlog, onNavigate }: BlogPostViewPro
 
   const pageUrl = typeof window !== 'undefined' ? window.location.href : `https://kbtreats.com/journal/${post.slug}`;
 
-  // Structured Data (JSON-LD) for SEO
+  // Extract Q&A sections for Answer Engine Optimization (AEO) structured data
+  const questionSections = post.sections.filter((s) => s.heading.trim().endsWith('?'));
+
+  // Structured Data (JSON-LD) for SEO & Answer Engines
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -100,6 +103,16 @@ export function BlogPostView({ post, onSelectBlog, onNavigate }: BlogPostViewPro
     },
     articleSection: post.category,
     keywords: post.tags.join(', '),
+    ...(questionSections.length > 0 && {
+      hasPart: questionSections.map((sec) => ({
+        '@type': 'Question',
+        name: sec.heading,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: sec.body[0],
+        },
+      })),
+    }),
   };
 
   return (

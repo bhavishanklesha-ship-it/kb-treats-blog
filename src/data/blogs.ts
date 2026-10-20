@@ -59,16 +59,16 @@ export const BLOG_POSTS: BlogPost[] = [
         bakerTip: 'Great baking is equal parts patience and sensory intuition. If the kitchen smells rich and warm, your oven is doing its magic.'
       },
       {
-        heading: 'The Turning Point: The First Bespoke Wedding Order',
+        heading: 'How Did KB Treats Transition from a Home Kitchen to Bespoke Celebration Orders?',
         body: [
-          'The defining moment arrived when a dear couple asked for a two-tiered semi-naked vanilla bean cake layered with fresh raspberry coulis for their intimate garden wedding. Up until that point, the kitchen had been a hobbyist sanctuary. Stepping into the realm of custom wedding cakes demanded strict temperature controls, structural poise, and unwavering reliability.',
+          'KB Treats transitioned into bespoke celebration baking when our very first custom wedding client requested a two-tiered semi-naked vanilla bean cake with fresh raspberry coulis, proving that customers craved intimate, genuine, preservative-free cakes over mass-produced factory desserts. Up until that point, the kitchen had been a hobbyist sanctuary. Stepping into the realm of custom wedding cakes demanded strict temperature controls, structural poise, and unwavering reliability.',
           'When the bride messaged us the morning after saying, "Our guests could not stop talking about how moist and fragrant the cake was—it felt like a piece of home," we knew this was our lifelong calling. That was the day KB Treats truly found its voice: From Our Kitchen to Your Celebration.'
         ]
       },
       {
-        heading: 'Growing as a Homegrown Brand Without Losing Our Soul',
+        heading: 'How Does KB Treats Scale as a Homegrown Bakery Without Compromising Quality?',
         body: [
-          'As orders scaled from weekend batches of brownies to multi-tiered celebration centerpieces, we made a pact: KB Treats would never become an assembly-line bakery. We refused to pre-freeze sponges weeks in advance, we refused artificial pre-mixed cake powders, and we rejected margarine or palm oil in place of real butter.',
+          'KB Treats maintains uncompromising artisan quality by strictly baking to order, refusing artificial cake premixes, rejecting margarine or palm oil, and never pre-freezing cake sponges weeks in advance. As orders scaled from weekend batches of brownies to multi-tiered celebration centerpieces, we made an absolute pact to never become an assembly-line bakery.',
           'Every single order that leaves our studio today is baked specifically for the person who requested it. When you open a box from KB Treats, you are opening hours of thoughtful measuring, slow folding, and delicate decorating tailored to your exact moment of happiness.'
         ]
       }
@@ -101,18 +101,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'The Evanescent Magic of Volatile Aroma Compounds',
+        heading: 'Why Do Volatile Aroma Compounds Make Fresh Bakes Taste Superior?',
         body: [
-          'When a sponge cake or tray of brownies is pulled hot from the oven, hundreds of volatile aromatic compounds are active. The Maillard reaction—where natural dairy sugars and proteins caramelize together—creates complex notes of toffee, roasted hazelnuts, and warm vanilla.',
-          'In commercially stored desserts, these delicate aromas evaporate within 48 hours. What remains is sweet bulk, but the nuance is gone. In contrast, freshly prepared desserts from KB Treats greet your senses immediately upon unboxing because those compounds are still locked inside the tender crumb.'
+          'Volatile aromatic flavor compounds created during the oven’s Maillard reaction—including toasted hazelnut notes, browning butter, and caramelized dairy sugars—peak within the first 24 to 48 hours of baking and rapidly dissipate thereafter. In commercially stored desserts, these delicate aromas evaporate while sitting on display shelves. In contrast, freshly prepared desserts from KB Treats greet your senses immediately upon unboxing because those natural aromatic compounds are still locked inside the tender crumb.',
+          'When a sponge cake or tray of brownies is pulled hot from our ovens, hundreds of active aromatic compounds are captured fresh, ensuring your celebratory bites are fragrant, vibrant, and multi-layered.'
         ],
         bakerTip: 'Keep cakes at room temperature for at least 45 minutes before cutting if they were refrigerated. Cold butter dulls the tastebuds, while room-temperature butter releases its full creamy richness.'
       },
       {
-        heading: 'Crumb Structure and Natural Moisture Retention',
+        heading: 'How Does Baking to Order Retain Natural Crumb Moisture Without Chemical Preservatives?',
         body: [
-          'Commercial baked goods designed to sit on retail displays for two weeks rely heavily on chemical humectants, preservatives, and shortening. While they feel soft to the touch, they coat the palate with a greasy film that lingers uncomfortably.',
-          'At KB Treats, moisture comes from real eggs, slow-churned butter, rich cultured buttermilk, and genuine chocolate fat. Because we bake strictly to order, your dessert doesn’t require artificial life-support chemicals to stay tender—it is naturally succulent because it was created only hours before your gathering.'
+          'Baking to order retains natural crumb moisture through the pure dairy emulsion of farm-fresh eggs, slow-churned European butter, cultured buttermilk, and cocoa fats rather than synthetic humectants or artificial stabilizers. Commercial baked goods designed to sit on retail displays for two weeks rely heavily on chemical additives and shortenings that leave an uncomfortable greasy film on the palate.',
+          'At KB Treats, because we bake strictly to order on the morning of your event, your dessert doesn’t require artificial life-support chemicals to stay tender—it is naturally succulent and elastic because it was created only hours before your gathering.'
         ]
       },
       {
@@ -150,18 +150,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'Phase 1: Listening to the Story Behind the Celebration',
+        heading: 'How Do We Translate Your Event Theme into a Custom Cake Design?',
         body: [
-          'No two celebrations are identical. A 1st birthday party has an entirely different energy from a 50th golden anniversary or an intimate rooftop engagement. When a client contacts KB Treats with an inquiry, our first conversation is never just "how many slices?"; it is "what is the mood of your celebration?"',
-          'We look at your invitation design, venue floral arrangements, dress colors, and personal aesthetic preferences. A custom cake shouldn’t sit in isolation on a dessert table; it should serve as the triumphant focal point of your event decor.'
+          'We translate your event theme into a custom cake design by analyzing your invitation artwork, venue floral arrangements, event color palettes, and personal aesthetic preferences to create a cohesive edible centerpiece. A custom cake shouldn’t sit in isolation on a dessert table; it should serve as the triumphant focal point of your event decor.',
+          'No two celebrations are identical. A first birthday party has an entirely different energy from a golden anniversary or an intimate rooftop engagement. When you contact KB Treats, our initial conversation is focused on understanding the exact emotional mood, scale, and theme of your celebration.'
         ],
         bakerTip: 'When sending reference images, tell us what you love most about each photo—whether it’s the textured piping, the color balance, or the fruit arrangement. That helps us synthesize a unique original piece for you.'
       },
       {
-        heading: 'Phase 2: Harmonizing Design with Flavour Architecture',
+        heading: 'How Do We Harmonize External Cake Architecture with Internal Flavours?',
         body: [
-          'A cake can look gorgeous on the outside, but if the cake itself is dry or overly sweet, the experience falls flat. At KB Treats, external design and internal flavor architecture are developed in tandem.',
-          'For example, a tall outdoor summer celebration calls for a stable Swiss meringue buttercream infused with lemon zest and raspberry coulis, while a cozy evening birthday might favor an opulent Belgian chocolate fudge sponge with salted caramel crunch.'
+          'We harmonize external cake architecture with internal flavours by matching structural frosting stability and sponge density to the venue climate and guest dining format. For example, a tall outdoor summer celebration calls for a stable Swiss meringue buttercream infused with lemon zest and raspberry coulis, while a cozy evening dinner party favors an opulent Belgian chocolate fudge sponge with salted caramel crunch.',
+          'A cake can look gorgeous on the outside, but if the crumb is dry or overly sweet, the experience falls flat. At KB Treats, external design and internal flavor architecture are developed in tandem so the cake looks stunning and eats like a dream.'
         ]
       },
       {
@@ -200,10 +200,10 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'The Art of Flavor Balance: Sweetness Needs a Dance Partner',
+        heading: 'Why Is Multi-Dimensional Flavor Balance Crucial in Gourmet Celebration Cakes?',
         body: [
-          'One of the most frequent compliments KB Treats receives is: "Your cakes are so rich, yet never sickly sweet!" This is not an accident. In professional pastry, sweetness is merely one dimension. It requires companions: acidity to brighten, salt to amplify, and bitterness or floral aromatics to add depth.',
-          'When we formulate a cake, we make sure every layer serves a purpose. A velvety dark chocolate sponge is paired with a touch of flaky sea salt and silky caramel; a delicate vanilla sponge is enlivened by tart homemade raspberry reduction.'
+          'Multi-dimensional flavor balance is crucial in gourmet cakes because sweetness alone quickly overwhelms the palate; pairing rich sugars with natural fruit acidity, mineral salt, or roasted cocoa bitterness prevents desserts from tasting cloying. At KB Treats, every cake recipe incorporates intentional flavor counterpoints—such as balancing 60% dark Belgian ganache with flaky sea salt caramel, or enlivening sweet vanilla bean sponge with tart homemade raspberry coulis.',
+          'One of the most frequent compliments KB Treats receives is that our cakes are deeply rich yet refreshingly balanced. When we formulate a bespoke cake, every sponge, soak, and filling layer serves a distinct sensory purpose.'
         ],
         bakerTip: 'Pair light, citrus or berry-forward cakes with warm daytime celebrations, and rich chocolate or praline profiles with evening dinners.'
       },
@@ -217,9 +217,10 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: 'Creating Custom Combinations for Your Guests',
+        heading: 'Can You Create Custom Cake Flavor Combinations for Specific Dietary or Event Needs?',
         body: [
-          'Have a nostalgic flavor memory from your childhood, or a favorite fruit pairing? We routinely collaborate with clients to tailor flavors. Customization means you never have to settle for the standard tier when something extraordinary can be baked just for you.'
+          'Yes, KB Treats routinely creates custom cake flavor combinations tailored to specific celebration themes, dietary requirements, and seasonal preferences by formulating bespoke sponge and filling pairings. Whether you wish to recreate a nostalgic childhood flavor, pair seasonal fresh mango with passionfruit curd, or craft an eggless Belgian chocolate tier, our pastry kitchen tailors every recipe to order.',
+          'Customization means you never have to settle for standard catalog tiers. We work directly with you to ensure your centerpiece cake delights every guest at your table.'
         ]
       }
     ],
@@ -251,18 +252,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'The Case for the Classic Fudgy Brownie',
+        heading: 'What Distinguishes an Authentic Fudgy Brownie from Cakey Alternatives?',
         body: [
-          'A true brownie is unapologetically intense. At KB Treats, we reject cakey, dry brownies that crumble into dust. Our recipe utilizes melted pure Belgian dark chocolate, browned butter, and minimal flour so that the baked square sets into a glossy, fudgy, decadent delight.',
-          'If you are an uncompromising chocolate purist who craves deep cocoa notes, sea salt flakes, and that iconic paper-thin crinkly crust that shatters on your tongue, the KB Treats Belgian Dark Brownie is your soulmate.'
+          'An authentic fudgy brownie is distinguished by a dense, chewy chocolate interior and a paper-thin crinkly crust achieved with high proportions of melted Belgian couverture chocolate, browned butter, and minimal flour without baking powder. In stark contrast to cakey brownies that crumble into dry crumbs, our brownies set into a glossy, fudgy square that melts slowly on the tongue.',
+          'If you are an uncompromising chocolate purist who craves deep cocoa notes, sea salt flakes, and that iconic paper-thin crust that shatters on your tongue, the KB Treats Belgian Dark Brownie is your soulmate.'
         ],
         bakerTip: 'Slice brownies only after they have chilled thoroughly in the fridge. This yields razor-sharp clean edges and an ultra-dense fudgy texture.'
       },
       {
-        heading: 'The Allure of the Brookie: Why Settle for One?',
+        heading: 'What Is a Brookie and Why Is It the Ultimate Cookie-Brownie Hybrid?',
         body: [
-          'What happens when you love a chewy, buttery chocolate chip cookie but cannot bear to give up chocolate fudge? You combine them into a brookie. The beauty of a brookie lies entirely in contrast.',
-          'The bottom half is dense, rich chocolate; the top half is golden-baked cookie dough speckled with melty chocolate chips and nutty brown-butter richness. Every bite alternates between the caramel-toffee chew of a cookie and the melt-in-your-mouth richness of a brownie.'
+          'A brookie is an artisanal hybrid dessert featuring a dense fudgy dark chocolate brownie base baked together with a golden, chewy chocolate chip cookie layer on top. This dual-bake architecture delivers contrasting textural harmony in every single bite—combining the toffee-caramel chew of browned butter cookies with the molten richness of Belgian cocoa.',
+          'The beauty of a brookie lies entirely in contrast: the bottom half is dense, rich chocolate fudge, while the top half is golden-baked cookie dough speckled with melty chocolate chips and nutty browned-butter richness.'
         ]
       },
       {
@@ -300,18 +301,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'The Magic of Cultured Tang and Velvety Texture',
+        heading: 'Why Does High-Quality Cheesecake Cleanse the Palate After Rich Meals?',
         body: [
-          'After a lavish multi-course feast, heavy desserts can sometimes feel overwhelming. This is where cheesecake reigns triumphant. Because high-grade cream cheese brings a gentle lactic acidity to the table, it refreshes the palate while delivering undeniable indulgence.',
-          'At KB Treats, we avoid gelatin-heavy shortcuts that turn cheesecakes into rubbery puddings. Our cheesecakes rely on gentle, low-temperature water baths or high-temperature blast bakes that set egg and cream emulsions into pure velvet.'
+          'High-quality cheesecake cleanses the palate after rich meals because cultured cream cheese provides gentle lactic acidity that cuts through heavy fats while delivering smooth, velvety luxury without feeling cloying. Unlike heavy sponges or gelatin-stabilized commercial imitations, authentic cheesecake set through gentle low-temperature water baths or high-heat blast bakes refreshes the tastebuds effortlessly.',
+          'At KB Treats, we avoid gelatin-heavy shortcuts that turn cheesecakes into rubbery puddings. Our cheesecakes rely on gentle slow bakes or intense Basque blast bakes that set egg and cream emulsions into pure velvet.'
         ],
         bakerTip: 'Never rush the chilling of a baked cheesecake. It needs at least 8 hours in refrigeration to settle its delicate fat emulsion and mature in flavor.'
       },
       {
-        heading: 'Basque Burnt vs. New York Style: Two Iconic Personalities',
+        heading: 'What Is the Difference Between Basque Burnt Cheesecake and New York Cheesecake?',
         body: [
-          '1. The Basque Burnt Phenomenon: Hailing from San Sebastián, Spain, this cheesecake defies traditional rules. Baked crustless in parchment paper at intense heat, the exterior caramelizes into deep bronze notes reminiscent of crème brûlée, while the inner heart remains molten and custard-soft.',
-          '2. The Classic New York Style: Baked gently with a golden graham cracker and cinnamon crust, featuring a dense, silky crumb topped with homemade fresh raspberry coulis or Lotus Biscoff swirl.'
+          'The primary difference between Basque burnt cheesecake and New York cheesecake lies in crust, bake temperature, and texture: Basque burnt cheesecake is baked crustless in parchment paper at intense high heat to create a deeply caramelized bronze top and an oozing custard center, whereas New York style is baked slowly on a spiced buttery graham cracker crust with a uniform, silky-dense crumb.',
+          '1. The Basque Burnt Phenomenon: Hailing from San Sebastián, Spain, this cheesecake features rustic scorched caramel edges and a molten custard heart. 2. The Classic New York Style: Baked gently with a golden biscuit base and topped with homemade raspberry coulis or Lotus Biscoff swirl.'
         ]
       },
       {
@@ -349,18 +350,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'The Freedom of Variety on Your Dessert Table',
+        heading: 'Why Are Petite Desserts Ideal for Social Gatherings and Grazing Tables?',
         body: [
-          'When you serve a single cake, everyone has to enjoy the same flavor. But when your dessert spread includes an assortment of KB Treats gourmet cookies and handcrafted cupcakes, your guests can embark on their own tasting adventure.',
-          'One guest might reach for a Sea Salt Brown Butter Chocolate Chunk Cookie; another might fall in love with a delicate Bourbon Vanilla Bean Cupcake topped with fresh raspberries. Petite desserts cater to diverse preferences effortlessly.'
+          'Petite desserts are ideal for social gatherings because they eliminate the need for cake knives, plates, and cutlery while allowing guests to sample multiple gourmet flavors without committing to a single giant slice. When your dessert spread includes an assortment of KB Treats handcrafted cookies, mini bakes, and cupcakes, your guests can embark on their own tasting adventure effortlessly.',
+          'One guest might reach for a Sea Salt Brown Butter Chocolate Chunk Cookie; another might fall in love with a delicate Bourbon Vanilla Bean Cupcake topped with fresh raspberries. Petite desserts cater to diverse preferences and dynamic mingling.'
         ],
         bakerTip: 'Aging cookie dough in the refrigerator for 24 to 36 hours breaks down starches into simple sugars, creating dramatically superior toffee depth and chewiness.'
       },
       {
-        heading: 'The Craft Behind the Humble Cookie',
+        heading: 'How Does Dough Aging and Browned Butter Transform Handcrafted Cookies?',
         body: [
-          'Many people underestimate the humble cookie. But at KB Treats, our cookies undergo a meticulous process: slow-browning European butter until the milk solids turn nutty and amber, hand-chopping bars of couverture chocolate for varied molten pockets, and finishing with crunchy sea salt to cut through richness.',
-          'The result is a cookie with crisp, golden scalloped edges and a chewy, gooey center that stays irresistible long after it cools.'
+          'Dough aging for 24 to 36 hours breaks down complex flour starches into simple sugars for deeper toffee chew, while slow-browning European butter toasts milk solids to impart rich, nutty hazelnut aromas. Hand-chopping bars of couverture chocolate creates varied pockets of molten chocolate surrounded by crisp, golden scalloped edges finished with crunchy sea salt to cut through richness.',
+          'Many people underestimate the humble cookie, but at KB Treats, our brown-butter cookies undergo this meticulous multi-stage artisan process so that every bite stays tender, chewy, and deeply flavorful.'
         ]
       },
       {
@@ -398,10 +399,10 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'There Are No Miracles in the Oven Without Pure Ingredients',
+        heading: 'Why Are Real, Unadulterated Ingredients Essential in Artisanal Baking?',
         body: [
-          'Baking is a transparent craft. If you use cheap vegetable fat, your buttercream will feel greasy and waxy on the roof of your mouth. If you use synthetic vanilla essence, your cake will have an astringent, chemical aftertaste. You can disguise ingredients in some cuisines, but in baking, every single component speaks for itself.',
-          'From our very first batch at KB Treats, we made a non-negotiable decision: we would only bake with ingredients we would proudly serve our own loved ones.'
+          'Real, unadulterated ingredients are essential in artisanal baking because heat and chemical reactions in the oven ruthlessly expose shortcuts: synthetic vanillin leaves an astringent chemical aftertaste and hydrogenated fats leave a waxy residue on the tongue. In contrast, pure dairy butter, whole vanilla bean pods, and unbleached flour create authentic clean mouthfeels that melt at human body temperature.',
+          'From our very first batch at KB Treats, we made a non-negotiable decision: we would only bake with pure ingredients we proudly serve to our own families and loved ones.'
         ],
         bakerTip: 'Look at the ingredients on chocolate packages: if it lists "vegetable fat" instead of pure "cocoa butter", it is compound chocolate, not real couverture.'
       },
@@ -414,9 +415,10 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: 'Why Our Clients Taste the Difference',
+        heading: 'How Does Pure Couverture Chocolate Differ from Compound Chocolate in Desserts?',
         body: [
-          'When you bite into a slice from KB Treats, the sweetness never overpowers the natural flavors of dairy, chocolate, and fruit. Premium ingredients allow the true beauty of each recipe to shine without relying on excess white sugar for cheap flavor.'
+          'Pure couverture chocolate contains a minimum of 31% pure cocoa butter without any vegetable oil substitutes, enabling it to melt smoothly at body temperature with complex cocoa fruit notes and a luxurious sheen. In contrast, compound chocolate substitutes cocoa butter with hydrogenated palm or vegetable oils, leaving a waxy aftertaste and a flat, artificial sweetness that masks dessert nuance.',
+          'When you bite into a slice or square from KB Treats, the sweetness never overpowers the natural flavors of dairy, chocolate, and fruit. Premium ingredients allow the true beauty of each recipe to shine without relying on excess white sugar.'
         ]
       }
     ],
@@ -448,10 +450,10 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'Step 1: Understand the Flow of Your Event',
+        heading: 'How Do You Match Dessert Formats to the Style and Flow of Your Event?',
         body: [
-          'Are your guests seated for a formal dinner where cake will be served as the grand finale? Or is it an active social mixer with people chatting on a terrace with glasses in hand?',
-          'For seated dinners, an artisanal cheesecake or a structured tier of celebration cake sliced onto dessert plates feels regal. For energetic mixers or office parties, an assorted platter of brookies, brownies, and cupcakes eliminates the need for cake knives and plates while keeping the party flowing smoothly.'
+          'To match dessert formats to your event, evaluate whether your gathering is a seated formal meal or an active social mixer: seated dinners call for formal sliced centerpieces like bespoke celebration cakes or artisanal Basque cheesecakes, whereas cocktail parties, terrace mixers, and office gatherings thrive on finger-friendly dessert platters of brownies, brookies, and cookies that require no plates or cutlery.',
+          'Understanding whether your guests will be seated with dessert forks or mingling with beverage glasses in hand prevents logistical bottlenecks and ensures everyone enjoys their dessert seamlessly.'
         ],
         bakerTip: 'Always order 10% more handheld items than total guests if offering multiple flavors—people naturally love sampling more than one!'
       },
@@ -463,9 +465,10 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: 'Step 3: Calculating the Ideal Size',
+        heading: 'How Do You Calculate Cake Portions and Dessert Quantities for Your Guest Count?',
         body: [
-          'One of our core services at KB Treats is consultation. We help you calculate whether a 6-inch tall cake (serves 8-12) or an 8-inch tier (serves 18-24) is appropriate, or whether a combination of a centerpiece cake and assorted dessert bites delivers the best experience for your budget and guests.'
+          'To calculate cake portions and dessert quantities accurately, allocate 1 generous coffee slice (approx. 100g to 120g) per guest for seated dinners, or 2 to 3 handheld petite treats per person for cocktail receptions and dessert grazing tables. A 6-inch tall celebration cake comfortably serves 8 to 12 guests, while an 8-inch tier accommodates 18 to 24 guests, ensuring satisfying servings with zero food wastage.',
+          'One of our core personalized services at KB Treats is consultation. We help you calculate whether a centerpiece cake, an assorted dessert platter, or a combination delivers the best experience for your budget and venue.'
         ]
       }
     ],
@@ -497,18 +500,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'More Than Just an Order Number: A Personal Relationship',
+        heading: 'How Does KB Treats Personalize Every Custom Cake Order?',
         body: [
-          'At KB Treats, you are never an anonymous barcode. When you reach out to tell us about your mother’s 60th birthday, your best friend’s promotion, or your child’s first cake smash, we become emotionally invested in making that moment unforgettable.',
+          'KB Treats personalizes every custom cake order by conducting a one-on-one consultation on milestone themes, preferred flavor memories, floral decor, and guest count rather than processing generic order numbers. When you reach out about a milestone birthday, wedding, or anniversary, we become personally invested in translating your story into an edible centerpiece.',
           'We ask about their favorite flavors, their favorite flowers, and the overall color story. That level of personal dialogue is only possible because we remain an authentic homegrown kitchen that values human connection above all else.'
         ],
         bakerTip: 'Handle cake boxes with both hands supporting the bottom base—never hold them by the top ribbon or tilt them during car transit!'
       },
       {
-        heading: 'The Sacred Morning of Your Bake',
+        heading: 'Why Does Baking on the Morning of Your Event Ensure Superior Freshness?',
         body: [
-          'On the morning of your event, our kitchen is humming before sunrise. Sponges are baked fresh and cooled under gentle covers. Buttercream is whipped until feather-light. Fruit garnishes are washed, patted dry, and inspected for perfection.',
-          'When the final sprig of rosemary or gold leaf flake is placed, the cake is boxed in a reinforced, elegant window cake box tied with satin ribbon and accompanied by our handwritten care card with slicing instructions.'
+          'Baking on the morning of your event ensures superior freshness because freshly whipped Swiss meringue buttercream, tender sponge crumb, and warm fruit reductions retain their optimal aromatics and moisture when prepared hours before consumption rather than sitting in commercial chillers. Nothing in our kitchen is ever pre-frozen weeks in advance.',
+          'On the morning of your event, our kitchen is humming before sunrise. Sponges are baked fresh and cooled under gentle covers. Buttercream is whipped until feather-light. When the final edible accent is placed, the cake is boxed in a reinforced window cake box tied with satin ribbon and accompanied by our handwritten care card.'
         ]
       },
       {
