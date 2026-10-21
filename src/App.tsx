@@ -13,6 +13,7 @@ import { DessertsView } from './components/DessertsView';
 import { CustomOrdersView } from './components/CustomOrdersView';
 import { ContactView } from './components/ContactView';
 import { BlogPostView } from './components/BlogPostView';
+import { NotFoundView } from './components/NotFoundView';
 import { BlogPost, findBlogPost } from './data/blogs';
 
 function parseRoute(): { page: NavigationPage; articleSlug: string | null } {
@@ -42,6 +43,14 @@ function parseRoute(): { page: NavigationPage; articleSlug: string | null } {
   const path = (typeof window !== 'undefined' ? window.location.pathname : '/')
     .toLowerCase()
     .replace(/\/+$/, '') || '/';
+
+  // 301 Permanent Redirect handling from /old-home to /
+  if (path === '/old-home') {
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(null, '', '/');
+    }
+    return { page: 'home', articleSlug: null };
+  }
 
   if (path === '/' || path === '/home') {
     return { page: 'home', articleSlug: null };
@@ -86,7 +95,8 @@ function parseRoute(): { page: NavigationPage; articleSlug: string | null } {
     }
   }
 
-  return { page: 'home', articleSlug: null };
+  // Return custom friendly 404 page for unmatched routes
+  return { page: '404', articleSlug: null };
 }
 
 export default function App() {
@@ -115,8 +125,10 @@ export default function App() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const origin = window.location.origin;
-    const currentPath = window.location.pathname;
+    const origin = typeof window !== 'undefined'
+      ? (window.location.hostname.includes('kbtreats.com') ? 'https://kbtreats.com' : window.location.origin)
+      : 'https://kbtreats.com';
+    const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
     const canonicalUrl = `${origin}${currentPath}`;
 
     let pageTitle = 'KB Treats | Homemade Bakery & Custom Cakes in Mumbai';
@@ -146,6 +158,9 @@ export default function App() {
     } else if (currentPage === 'contact') {
       pageTitle = 'Contact & Direct Ordering | KB Treats';
       metaDesc = 'Get in touch with Bhavisha and the KB Treats kitchen. Call, WhatsApp, or order directly for fresh bakes delivered across Mumbai.';
+    } else if (currentPage === '404') {
+      pageTitle = 'Page Not Found (404) | KB Treats Homemade Bakery';
+      metaDesc = 'Oops! Looks like this treat is not in our oven. Explore our handcrafted celebration cakes, 2-in-1 cookie tins, brownie tubs, and dessert journal.';
     }
 
     document.title = pageTitle;
@@ -186,7 +201,7 @@ export default function App() {
   const handleNavigate = useCallback((page: NavigationPage) => {
     setCurrentPage(page);
     setActiveBlogSlug(null);
-    const targetPath = page === 'home' ? '/' : page === 'blog' ? '/journal' : `/${page}`;
+    const targetPath = page === 'home' ? '/' : page === 'blog' ? '/journal' : page === '404' ? '/404' : `/${page}`;
     if (window.location.pathname !== targetPath) {
       window.history.pushState(null, '', targetPath);
     }
@@ -262,6 +277,13 @@ export default function App() {
 
             {currentPage === 'contact' && (
               <ContactView />
+            )}
+
+            {currentPage === '404' && (
+              <NotFoundView
+                onNavigate={handleNavigate}
+                onSelectBlog={handleSelectBlog}
+              />
             )}
           </>
         )}

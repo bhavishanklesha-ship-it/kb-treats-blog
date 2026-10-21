@@ -1,0 +1,11 @@
+# robots.txt for KB Treats (https://kbtreats.com)
+# Allow all web crawlers and answer engine bots to index content
+
+User-agent: *
+Allow: /
+
+# Disallow internal admin or build artifacts if any
+Disallow: /api/private/
+
+# XML Sitemap location
+Sitemap: https://kbtreats.com/sitemap.xml

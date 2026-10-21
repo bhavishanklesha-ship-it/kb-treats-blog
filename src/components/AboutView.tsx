@@ -85,6 +85,8 @@ export function AboutView({ onNavigate }: AboutViewProps) {
                 src="/images/cookie_tin_two_in_one_og_1791350553246.jpg"
                 alt="Founder Bhavisha's signature KB Treats 2-in-1 gooey dark chocolate and golden cookie tin handcrafted in Mumbai"
                 loading="eager"
+                width={717}
+                height={960}
                 className="w-full h-[450px] object-cover"
               />
             </div>

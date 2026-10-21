@@ -126,6 +126,8 @@ export function HomeView({ onNavigate, onSelectBlog, onSelectDessertCategory }: 
                   alt="KB Treats bespoke celebration cake featuring multi-tiered sponge, pastel buttercream swirls, and fresh floral garnishes"
                   loading="eager"
                   fetchPriority="high"
+                  width={960}
+                  height={717}
                   className="w-full h-[430px] sm:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

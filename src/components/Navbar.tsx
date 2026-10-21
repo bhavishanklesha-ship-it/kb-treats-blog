@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Menu, X, ArrowRight, Phone, Instagram } from 'lucide-react';
 import { KbTreatsLogo } from './KbTreatsLogo';
 
-export type NavigationPage = 'home' | 'about' | 'blog' | 'desserts' | 'custom-orders' | 'contact';
+export type NavigationPage = 'home' | 'about' | 'blog' | 'desserts' | 'custom-orders' | 'contact' | '404';
 
 interface NavbarProps {
   currentPage: NavigationPage;
@@ -17,6 +17,7 @@ export const PAGE_PATHS: Record<NavigationPage, string> = {
   desserts: '/desserts',
   'custom-orders': '/custom-orders',
   contact: '/contact',
+  '404': '/404',
 };
 
 export function Navbar({ currentPage, onNavigate }: NavbarProps) {
