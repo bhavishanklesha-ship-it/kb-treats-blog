@@ -3,18 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import { Navbar, NavigationPage } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomeView } from './components/HomeView';
-import { AboutView } from './components/AboutView';
-import { BlogView } from './components/BlogView';
-import { DessertsView } from './components/DessertsView';
-import { CustomOrdersView } from './components/CustomOrdersView';
-import { ContactView } from './components/ContactView';
-import { BlogPostView } from './components/BlogPostView';
-import { NotFoundView } from './components/NotFoundView';
 import { BlogPost, findBlogPost } from './data/blogs';
+
+// Code-split secondary views so initial homepage load is ultra-fast (<2.5s)
+const AboutView = lazy(() => import('./components/AboutView').then(m => ({ default: m.AboutView })));
+const BlogView = lazy(() => import('./components/BlogView').then(m => ({ default: m.BlogView })));
+const DessertsView = lazy(() => import('./components/DessertsView').then(m => ({ default: m.DessertsView })));
+const CustomOrdersView = lazy(() => import('./components/CustomOrdersView').then(m => ({ default: m.CustomOrdersView })));
+const ContactView = lazy(() => import('./components/ContactView').then(m => ({ default: m.ContactView })));
+const BlogPostView = lazy(() => import('./components/BlogPostView').then(m => ({ default: m.BlogPostView })));
+const NotFoundView = lazy(() => import('./components/NotFoundView').then(m => ({ default: m.NotFoundView })));
 
 function parseRoute(): { page: NavigationPage; articleSlug: string | null } {
   // Gracefully migrate legacy hash if present (e.g., #about, #article/slug)
@@ -234,59 +236,65 @@ export default function App() {
 
       {/* Main View Area */}
       <main className="flex-1">
-        {activeArticle ? (
-          /* Dedicated Standalone Full Webpage for the Blog Article */
-          <BlogPostView
-            post={activeArticle}
-            onSelectBlog={handleSelectBlog}
-            onNavigate={handleNavigate}
-          />
-        ) : (
-          /* General Website Pages */
-          <>
-            {currentPage === 'home' && (
-              <HomeView
-                onNavigate={handleNavigate}
-                onSelectBlog={handleSelectBlog}
-              />
-            )}
+        <Suspense fallback={
+          <div className="min-h-[40vh] flex items-center justify-center py-16" aria-label="Loading page content...">
+            <div className="w-8 h-8 rounded-full border-2 border-[#5E123B] border-t-transparent animate-spin" />
+          </div>
+        }>
+          {activeArticle ? (
+            /* Dedicated Standalone Full Webpage for the Blog Article */
+            <BlogPostView
+              post={activeArticle}
+              onSelectBlog={handleSelectBlog}
+              onNavigate={handleNavigate}
+            />
+          ) : (
+            /* General Website Pages */
+            <>
+              {currentPage === 'home' && (
+                <HomeView
+                  onNavigate={handleNavigate}
+                  onSelectBlog={handleSelectBlog}
+                />
+              )}
 
-            {currentPage === 'about' && (
-              <AboutView onNavigate={handleNavigate} />
-            )}
+              {currentPage === 'about' && (
+                <AboutView onNavigate={handleNavigate} />
+              )}
 
-            {currentPage === 'blog' && (
-              <BlogView
-                onSelectBlog={handleSelectBlog}
-                onNavigate={handleNavigate}
-              />
-            )}
+              {currentPage === 'blog' && (
+                <BlogView
+                  onSelectBlog={handleSelectBlog}
+                  onNavigate={handleNavigate}
+                />
+              )}
 
-            {currentPage === 'desserts' && (
-              <DessertsView
-                onNavigate={handleNavigate}
-                onSelectCustomDessert={handleSelectCustomDessert}
-              />
-            )}
+              {currentPage === 'desserts' && (
+                <DessertsView
+                  onNavigate={handleNavigate}
+                  onSelectCustomDessert={handleSelectCustomDessert}
+                />
+              )}
 
-            {currentPage === 'custom-orders' && (
-              <CustomOrdersView
-                prefilledDessertName={prefilledCustomDessert}
-              />
-            )}
+              {currentPage === 'custom-orders' && (
+                <CustomOrdersView
+                  prefilledDessertName={prefilledCustomDessert}
+                />
+              )}
 
-            {currentPage === 'contact' && (
-              <ContactView />
-            )}
+              {currentPage === 'contact' && (
+                <ContactView />
+              )}
 
-            {currentPage === '404' && (
-              <NotFoundView
-                onNavigate={handleNavigate}
-                onSelectBlog={handleSelectBlog}
-              />
-            )}
-          </>
-        )}
+              {currentPage === '404' && (
+                <NotFoundView
+                  onNavigate={handleNavigate}
+                  onSelectBlog={handleSelectBlog}
+                />
+              )}
+            </>
+          )}
+        </Suspense>
       </main>
 
       {/* Brand Footer */}

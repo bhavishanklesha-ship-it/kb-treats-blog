@@ -11,6 +11,31 @@ export default defineConfig(() => {
         '@': path.resolve('.'),
       },
     },
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
+    },
+    build: {
+      target: 'es2020',
+      minify: 'esbuild',
+      cssMinify: true,
+      sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('lucide-react')) {
+                return 'vendor-icons';
+              }
+              if (id.includes('/react/') || id.includes('/react-dom/') || id.endsWith('/react') || id.endsWith('/react-dom')) {
+                return 'vendor-react';
+              }
+              return 'vendor';
+            }
+          },
+        },
+      },
+      chunkSizeWarningLimit: 600,
+    },
     server: {
       port: 3000,
       host: '0.0.0.0',

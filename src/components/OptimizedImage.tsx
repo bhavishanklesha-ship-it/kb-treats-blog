@@ -66,6 +66,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const baseFilename = src ? src.split('/').pop()?.replace(/\.(jpe?g|webp|png)$/i, '') || '' : '';
   const intrinsic = INTRINSIC_IMAGE_DIMENSIONS[baseFilename] || { width: 800, height: 600 };
 
+  // Detect mobile-optimized responsive variants
+  const mobileWebpSrc = (baseFilename === 'hero_bespoke_celebration_cake_1791370876379' || baseFilename === 'hero_celebration_cake_1791347545940')
+    ? `/images/${baseFilename}_640.webp`
+    : '';
+
   const finalWidth = width ?? intrinsic.width;
   const finalHeight = height ?? intrinsic.height;
 
@@ -85,6 +90,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   return (
     <picture className="block w-full h-full">
+      {mobileWebpSrc && (
+        <source
+          type="image/webp"
+          media="(max-width: 640px)"
+          srcSet={mobileWebpSrc}
+          width={640}
+          height={Math.round((intrinsic.height / intrinsic.width) * 640)}
+        />
+      )}
       {webpSrc && (
         <source
           type="image/webp"
